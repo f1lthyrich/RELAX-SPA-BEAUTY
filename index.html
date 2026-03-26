@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Relax Spa & Beauty | Complete Services & Products | Burbank, CA</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Jost', sans-serif; background: #FDF8F0; color: #2C2418; overflow-x: hidden; }
+.gradient-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: linear-gradient(135deg, #FFF9F0 0%, #FDF5E8 100%); animation: bgShift 15s infinite alternate; }
+@keyframes bgShift { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(2deg); } }
+.heat-wave { position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; background: repeating-linear-gradient(0deg, rgba(184,146,74,0.02) 0px, rgba(184,146,74,0.02) 2px, transparent 2px, transparent 8px); animation: heatRise 8s linear infinite; }
+@keyframes heatRise { 0% { transform: translateY(0); opacity: 0.3; } 50% { transform: translateY(-20px); opacity: 0.6; } 100% { transform: translateY(-40px); opacity: 0.3; } }
+.water-ripple { position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; background: radial-gradient(circle at 30% 70%, rgba(46,107,110,0.03) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(46,107,110,0.03) 0%, transparent 50%); animation: rippleFlow 6s infinite alternate; }
+@keyframes rippleFlow { 0% { background-position: 0% 0%; opacity: 0.2; } 100% { background-position: 2% 2%; opacity: 0.5; } }
+.header { position: sticky; top: 0; z-index: 1000; background: rgba(253, 248, 240, 0.96); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(184,146,74,0.12); }
+.top-bar { background: linear-gradient(135deg, #2E6B6E, #1f4e50); padding: 3px 1.8rem; display: flex; justify-content: flex-end; gap: 1.2rem; font-size: 0.6rem; flex-wrap: wrap; }
+.top-bar span, .top-bar a { color: rgba(255,248,235,0.85); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+.main-header { padding: 0.4rem 1.8rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; }
+.logo { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #B8924A, #8C6A2E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+.logo-text h1 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 600; }
+.logo-text p { font-size: 0.45rem; letter-spacing: 1px; color: #B8924A; }
+.service-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.service-pill { padding: 3px 12px; border-radius: 40px; font-size: 0.65rem; font-weight: 500; cursor: pointer; background: rgba(184,146,74,0.06); border: 1px solid rgba(184,146,74,0.12); }
+.service-pill:hover { background: rgba(184,146,74,0.12); transform: translateY(-1px); }
+.btn-book { background: linear-gradient(135deg, #B8924A, #9B783E); color: white; border: none; padding: 5px 14px; border-radius: 40px; font-weight: 600; font-size: 0.65rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.btn-book:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(184,146,74,0.3); }
+.nav-menu { display: flex; justify-content: center; gap: 1.2rem; padding: 0.4rem 1.8rem; border-top: 1px solid rgba(184,146,74,0.08); flex-wrap: wrap; }
+.nav-menu a { text-decoration: none; color: #4A3A2A; font-weight: 500; font-size: 0.65rem; cursor: pointer; position: relative; }
+.nav-menu a:after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1.5px; background: linear-gradient(90deg, #B8924A, #D4AE72); transition: width 0.2s; }
+.nav-menu a:hover:after, .nav-menu a:active:after { width: 100%; }
+.hero { text-align: center; padding: 1.5rem 2rem 1rem; }
+.hero-badge { display: inline-block; background: linear-gradient(135deg, rgba(184,146,74,0.15), rgba(184,146,74,0.05)); padding: 0.2rem 0.8rem; border-radius: 40px; font-size: 0.65rem; font-weight: 600; color: #B8924A; margin-bottom: 0.8rem; animation: badgePulse 2s infinite; }
+@keyframes badgePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(184,146,74,0.2); } 50% { box-shadow: 0 0 0 6px rgba(184,146,74,0.1); } }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; background: linear-gradient(135deg, #2C2418, #B8924A, #2E6B6E, #D4AE72, #2C2418); background-size: 400% 400%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: infiniteGradient 8s ease infinite; }
+@keyframes infiniteGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.stats { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0; padding: 0.8rem 0; background: linear-gradient(90deg, transparent, rgba(184,146,74,0.05), transparent); }
+.stat-number { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 800; color: #B8924A; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+.info-card { background: rgba(255,255,245,0.8); backdrop-filter: blur(8px); border-radius: 20px; padding: 1rem; border: 1px solid rgba(184,146,74,0.1); }
+.card-icon { font-size: 1.3rem; color: #B8924A; margin-bottom: 0.3rem; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+.card-text { font-size: 0.7rem; color: #6B5A48; line-height: 1.4; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.category-header { background: linear-gradient(135deg, #2E6B6E, #1f4e50); color: white; padding: 0.8rem 1rem; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; border-radius: 16px 16px 0 0; }
+.service-category { background: white; border-radius: 16px; overflow: hidden; border: 1px solid rgba(184,146,74,0.1); }
+.service-item { padding: 0.8rem; border-bottom: 1px solid rgba(184,146,74,0.1); }
+.service-item:last-child { border-bottom: none; }
+.service-name { font-weight: 700; font-size: 0.85rem; color: #2C2418; }
+.service-desc { font-size: 0.7rem; color: #6B5A48; margin: 4px 0; }
+.service-price { color: #B8924A; font-weight: 600; font-size: 0.75rem; margin-top: 4px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; text-align: center; margin-bottom: 0.5rem; }
+.dashboard { display: block; min-height: calc(100vh - 100px); }
+.main-content { padding: 0.8rem; }
+.section-panel, .product-detail-panel { display: none; animation: faden 0.4s ease; }
+.section-panel.active-panel, .product-detail-panel.active-panel { display: block; }
+@keyframes faden { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.toast { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #2E6B6E, #1f4e50); color: white; padding: 8px 16px; border-radius: 40px; font-size: 0.7rem; z-index: 1000; animation: slideToast 0.3s ease; }
+@keyframes slideToast { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.product-card { background: white; border-radius: 18px; overflow: hidden; transition: all 0.3s; border: 1px solid rgba(184,146,74,0.1); cursor: pointer; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: #B8924A; }
+.product-img { width: 100%; height: 150px; object-fit: cover; background: #F2EBD9; }
+.product-info { padding: 0.7rem; }
+.product-name { font-weight: 700; font-size: 0.8rem; margin-bottom: 2px; }
+.product-price { color: #B8924A; font-weight: 700; font-size: 0.85rem; margin: 3px 0; }
+.product-desc { font-size: 0.6rem; color: #6B5A48; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.add-to-cart-btn { margin-top: 6px; background: #F5EDE0; border: none; width: 100%; padding: 5px; border-radius: 40px; font-weight: 500; font-size: 0.6rem; cursor: pointer; color: #8C6A2E; }
+.add-to-cart-btn:hover { background: #B8924A; color: white; }
+.party-hero { background: linear-gradient(135deg, rgba(184,146,74,0.08), rgba(46,107,110,0.08)); border-radius: 28px; padding: 2rem; text-align: center; margin-bottom: 2rem; }
+.party-packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.party-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.party-card:hover { transform: translateY(-5px); }
+.party-card-header { background: linear-gradient(135deg, #B8924A, #8C6A2E); color: white; padding: 1rem; text-align: center; }
+.party-card-header.deluxe { background: linear-gradient(135deg, #2E6B6E, #1f4e50); }
+.party-price { font-size: 1.8rem; font-weight: 700; }
+.party-card-body { padding: 1.2rem; }
+.testimonial { background: rgba(255,255,245,0.8); border-radius: 20px; padding: 1.2rem; margin: 1.5rem 0; font-style: italic; border-left: 4px solid #B8924A; }
+.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.faq-item { background: white; border-radius: 16px; padding: 0.8rem; border: 1px solid rgba(184,146,74,0.1); }
+.party-form { background: white; border-radius: 24px; padding: 1.5rem; margin-top: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-group input, .form-group select, .form-group textarea { padding: 10px; border-radius: 16px; border: 1px solid #E8DDD0; font-family: inherit; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #B8924A; }
+.extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.extra-card { background: white; border-radius: 20px; padding: 1rem; text-align: center; border: 1px solid rgba(184,146,74,0.1); }
+.co-share-hero { background: linear-gradient(135deg, rgba(184,146,74,0.08), rgba(46,107,110,0.08)); border-radius: 28px; padding: 2rem; text-align: center; margin-bottom: 2rem; }
+.co-share-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+.co-share-card { background: white; border-radius: 24px; padding: 1.5rem; border: 1px solid rgba(184,146,74,0.1); }
+.co-share-card h3 { font-family: 'Playfair Display', serif; color: #B8924A; margin-bottom: 1rem; }
+.co-share-card ul { list-style: none; padding: 0; }
+.co-share-card li { padding: 0.5rem 0; border-bottom: 1px solid #F0E8DC; display: flex; align-items: center; gap: 8px; }
+.co-share-card li i { color: #B8924A; width: 20px; }
+.co-share-form { background: white; border-radius: 24px; padding: 1.5rem; margin-top: 2rem; }
+/* Cart Modal Styles */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.cart-modal.active {
+    display: flex;
+}
+.cart-content {
+    background: white;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    position: relative;
+}
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(184,146,74,0.2);
+}
+.cart-header h3 {
+    font-family: 'Playfair Display', serif;
+    color: #B8924A;
+}
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6B5A48;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #F0E8DC;
+}
+.cart-item-name {
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+.cart-item-price {
+    color: #B8924A;
+    font-weight: 600;
+}
+.remove-item {
+    background: none;
+    border: none;
+    color: #D4AE72;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.cart-total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(184,146,74,0.3);
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.cart-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-buttons .btn-book {
+    flex: 1;
+    text-align: center;
+}
+.empty-cart {
+    text-align: center;
+    color: #6B5A48;
+    padding: 2rem;
+}
+/* Chat Widget Styles */
+.chat-toggle-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B8924A, #9B783E);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.chat-toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(184,146,74,0.4);
+}
+.message.user {
+    background: #B8924A;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 16px;
+    max-width: 85%;
+    align-self: flex-end;
+    font-size: 12px;
+}
+.message.bot {
+    background: #F5EDE0;
+    padding: 8px 12px;
+    border-radius: 16px;
+    max-width: 85%;
+    align-self: flex-start;
+    font-size: 12px;
+    color: #2C2418;
+}
+@media (max-width: 800px) { 
+.main-header { flex-direction: column; text-align: center; } 
+.info-grid { grid-template-columns: 1fr; } 
+.hero h1 { font-size: 1.5rem; } 
+.services-grid { grid-template-columns: 1fr; } 
+.faq-grid { grid-template-columns: 1fr; } 
+.form-row { grid-template-columns: 1fr; } 
+.party-packages { grid-template-columns: 1fr; } 
+.extras-grid { grid-template-columns: 1fr; } 
+.co-share-grid { grid-template-columns: 1fr; } 
+/* Make top banners smaller on mobile */
+.top-bar { padding: 2px 0.5rem; gap: 0.5rem; font-size: 0.5rem; flex-wrap: wrap; justify-content: center; }
+.main-header { padding: 0.3rem 0.5rem; gap: 0.3rem; }
+.logo-icon { width: 24px; height: 24px; font-size: 0.7rem; }
+.logo-text h1 { font-size: 0.7rem; }
+.logo-text p { font-size: 0.35rem; }
+.service-pills { gap: 0.2rem; }
+.service-pill { padding: 2px 8px; font-size: 0.55rem; }
+.btn-book { padding: 3px 10px; font-size: 0.55rem; }
+.nav-menu { gap: 0.6rem; padding: 0.3rem 0.5rem; }
+.nav-menu a { font-size: 0.55rem; }
+.header-actions .btn-book { padding: 3px 8px; font-size: 0.55rem; }
+.cart-content { width: 95%; padding: 1rem; }
+.chat-toggle-btn { width: 45px; height: 45px; font-size: 20px; bottom: 15px; right: 15px; }
+.chat-window { width: 280px; height: 380px; bottom: 60px; right: 0; }
+}
+</style>
+</head>
+<body>
+<div class="gradient-bg"></div>
+<div class="heat-wave"></div>
+<div class="water-ripple"></div>
+<header class="header">
+<div class="top-bar">
+<span><i class="fas fa-map-marker-alt"></i> 122 E. Olive Ave, Burbank, CA 91502</span>
+<span><i class="fas fa-phone-alt"></i> (818) 557-0024</span>
+<span><i class="fas fa-envelope"></i> relaxappointment@yahoo.com</span>
+<span><i class="far fa-clock"></i> Mon-Fri 8am-5pm | Sat 9am-4pm</span>
+</div>
+<div class="main-header">
+<div class="logo" onclick="showPanel('home')"><div class="logo-icon"><i class="fas fa-spa"></i></div><div class="logo-text"><h1>Relax Spa & Beauty</h1><p>EST. 2012 · BURBANK</p></div></div>
+<div class="service-pills"><div class="service-pill" onclick="showPanel('services')">Facials</div><div class="service-pill" onclick="showPanel('services')">Massages</div><div class="service-pill" onclick="showPanel('services')">Body Sculpting</div><div class="service-pill" onclick="showPanel('pamper')">Pamper Parties</div><div class="service-pill" onclick="showPanel('products')">Shop</div></div>
+<div class="header-actions"><button class="btn-book" onclick="showPanel('appointments')"><i class="fas fa-calendar-check"></i> Book Now</button></div>
+</div>
+<div class="nav-menu"><a onclick="showPanel('home')">HOME</a><a onclick="showPanel('services')">SERVICES</a><a onclick="showPanel('products')">PRODUCTS</a><a onclick="showPanel('pamper')">PAMPER PARTIES</a><a onclick="showPanel('inside')">INSIDE THE SPA</a><a onclick="showPanel('appointments')">APPOINTMENTS</a><a onclick="showPanel('coshare')">CO-SHARE</a><a onclick="showPanel('policy')">POLICY</a></div>
+</header>
+<div class="dashboard">
+<div class="main-content">
+<div id="homePanel" class="section-panel active-panel">
+<div class="hero"><div class="hero-badge">✦ WELCOME TO YOUR SANCTUARY ✦</div><h1>Where tranquility<br>meets transformation</h1><p class="hero-sub" style="font-size:0.8rem; color:#6B5A48;">Experience award-winning spa treatments in Burbank. Cultivate healthy skin and total-body wellness.</p></div>
+<div class="stats"><div class="stat"><div class="stat-number">10+</div><div>YEARS</div></div><div class="stat"><div class="stat-number">15K+</div><div>CLIENTS</div></div><div class="stat"><div class="stat-number">50+</div><div>TREATMENTS</div></div><div class="stat"><div class="stat-number">⭐ 4.9</div><div>RATING</div></div></div>
+<div class="info-grid"><div class="info-card"><div class="card-icon"><i class="fas fa-om"></i></div><h2 class="card-title">About Us</h2><p class="card-text">Relax Spa & Beauty is an uplifting day spa in Burbank, CA. We cultivate healthy skin and promote total-body wellness with results-oriented treatments.</p></div><div class="info-card"><div class="card-icon"><i class="fas fa-gem"></i></div><h2 class="card-title">Why Choose Us</h2><p class="card-text">Award-winning service, expert therapists, premium products (Lira, Dermalogica), holistic care, flexible scheduling, luxury experience with infrared & couples suites.</p></div></div>
+
+<!-- New Home Page Content -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+<div class="info-card" style="text-align: center; cursor: pointer;" onclick="showPanel('services')">
+<div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+<h3 style="font-family:'Playfair Display'; font-size:1rem;">MASSAGES</h3>
+<p class="card-text">Remove physical stress with a full body massage. Discover the revitalizing benefits of the massage services offered at Relax Spa & Beauty.</p>
+</div>
+<div class="info-card" style="text-align: center; cursor: pointer;" onclick="showPanel('pamper')">
+<div class="card-icon"><i class="fas fa-glass-cheers"></i></div>
+<h3 style="font-family:'Playfair Display'; font-size:1rem;">PAMPER PARTIES</h3>
+<p class="card-text">Create a unique memory for you, your friends, and loved ones with a private spa day experience at Relax Spa & Beauty.</p>
+</div>
+<div class="info-card" style="text-align: center; cursor: pointer;" onclick="showPanel('services')">
+<div class="card-icon"><i class="fas fa-hand-sparkles"></i></div>
+<h3 style="font-family:'Playfair Display'; font-size:1rem;">FACIALS</h3>
+<p class="card-text">Relax Spa & Beauty uses premium beauty and skin care products for our facials. Take the spa experience home with our products.</p>
+</div>
+<div class="info-card" style="text-align: center; cursor: pointer;" onclick="showPanel('services')">
+<div class="card-icon"><i class="fas fa-fire"></i></div>
+<h3 style="font-family:'Playfair Display'; font-size:1rem;">BODY SCULPTING</h3>
+<p class="card-text">Try our non invasive ultrasonic cavitation, Lipo-laser, skin tightening and wood sculpting to help get rid of stubborn fat cells. We also offer Brazilian lymphatic massage.</p>
+</div>
+</div>
+
+<div class="info-card" style="margin: 1rem 0; text-align: center;">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.5rem;">Shop</h3>
+<p class="card-text" style="font-size:0.85rem;"><strong>Discover Results Oriented Skincare</strong></p>
+<p class="card-text">Try Relax Signature Body Care Today</p>
+<p class="card-text">Enjoy our aromatherapy body care for a spa like experience at home.</p>
+<p class="card-text" style="margin-top:0.5rem;">Enhanced wellbeing – Natural ingredients – No harsh chemicals – No parabens</p>
+<p class="card-text">Targeted Skincare for results oriented treatment includes: Lira Skincare, Dermalogica, Dermaki, Societe Skincare, Dr Schrammek and more!</p>
+<button class="btn-book" style="margin-top:0.8rem;" onclick="showPanel('products')">Shop All Products →</button>
+</div>
+
+<div class="info-card" style="margin: 1rem 0;">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.5rem;">Our Services</h3>
+<p class="card-text" style="font-size:0.85rem;"><strong>better health and restoration</strong></p>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.3rem; margin-top: 0.5rem;">
+<p class="card-text">✦ Body Massages</p>
+<p class="card-text">✦ Brazilian Lymphatic Massage</p>
+<p class="card-text">✦ Body Sculpting</p>
+<p class="card-text">✦ Lipo Laser</p>
+<p class="card-text">✦ Ultrasound Cavitation</p>
+<p class="card-text">✦ Radio Frequency</p>
+<p class="card-text">✦ Spa Parties</p>
+<p class="card-text">✦ Spa Packages</p>
+<p class="card-text">✦ Oxygen Facial</p>
+<p class="card-text">✦ Enzyme Facial</p>
+<p class="card-text">✦ Skin Tightening</p>
+<p class="card-text">✦ Microdermabrasion</p>
+<p class="card-text">✦ Microcurrent Facial</p>
+<p class="card-text">✦ and more…</p>
+</div>
+</div>
+
+<div class="info-card" style="margin: 1rem 0;">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.5rem;">Relax Spa & Beauty</h3>
+<p class="card-text" style="font-size:0.85rem;"><strong>Uplifting Day Spa</strong></p>
+<p class="card-text">Relax Spa & Beauty is an uplifting day spa in Burbank, California. We cultivate healthy skin and promote total-body wellness with results-oriented treatments. Our natural skincare services and body massages offer holistic self-care in a place of pure relaxation.</p>
+<p class="card-text" style="margin-top:0.8rem;">Our friendly, professionally trained estheticians and massage therapists are here to meet your needs and exceed your expectations. Whether you come solo or book a pamper party with friends, you'll feel rejuvenated and renewed. Welcome to our spa…an enjoyable experience is waiting for you!</p>
+</div>
+
+<div class="cta-card" style="background:#FEF6EA; border-radius:20px; padding:1rem; text-align:center; margin:1rem 0;"><button class="btn-book" onclick="showPanel('services')"><i class="fas fa-spa"></i> Explore Our Services →</button><button class="btn-book" style="margin-left:0.5rem; background:transparent; border:1px solid #B8924A; color:#B8924A;" onclick="showPanel('products')"><i class="fas fa-shopping-bag"></i> Shop All Products</button></div>
+</div>
+
+<div id="servicesPanel" class="section-panel">
+<div class="hero-badge" style="display:inline-block; margin:0 auto; text-align:center;">✦ OUR SERVICES ✦</div>
+<div class="section-title">Treatments That Transform</div>
+<div class="services-grid"><div class="service-category"><div class="category-header"><i class="fas fa-hand-sparkles"></i> Standard Facials</div><div class="service-item"><div class="service-name">Express Session</div><div class="service-price">30 min - $79.00</div></div><div class="service-item"><div class="service-name">Full Session</div><div class="service-price">60 min - $125.00 | First Time $99</div></div><div class="service-item"><div class="service-name">European Facial</div><div class="service-price">60 min - $125.00</div></div><div class="service-item"><div class="service-name">Glycolic Acid Facial</div><div class="service-price">60 min - $125.00</div></div><div class="service-item"><div class="service-name">Oxygen Therapy</div><div class="service-price">60 min - $125.00</div></div><div class="service-item"><div class="service-name">Enzyme Facial</div><div class="service-price">60 min - $125.00</div></div><div class="service-item"><div class="service-name">BACKCIAL™</div><div class="service-price">60 min - $115.00</div></div><div class="service-item"><div class="service-name">Fantasy Facial</div><div class="service-price">90 min - $165.00</div></div><div class="service-item"><div class="service-name">Night Night Facial</div><div class="service-price">60 min - $145.00</div></div></div><div class="service-category"><div class="category-header"><i class="fas fa-hand-holding-heart"></i> Massages</div><div class="service-item"><div class="service-name">Express Session</div><div class="service-price">30 min - $69.00</div></div><div class="service-item"><div class="service-name">Full Session</div><div class="service-price">55 min - $125.00 | First Time $99</div></div><div class="service-item"><div class="service-name">Swedish Massage</div><div class="service-price">55 min $125 | 85 min $145</div></div><div class="service-item"><div class="service-name">Deep Tissue Massage</div><div class="service-price">55 min - $125.00</div></div><div class="service-item"><div class="service-name">Night Night Massage</div><div class="service-price">60 min - $139.00</div></div><div class="service-item"><div class="service-name">Complete Care Massage</div><div class="service-price">55 min - $139.00</div></div><div class="service-item"><div class="service-name">The Royal Treatment</div><div class="service-price">85 min - $175.00</div></div><div class="service-item"><div class="service-name">Detox Massage</div><div class="service-price">60 min - $139.00</div></div></div><div class="service-category"><div class="category-header"><i class="fas fa-fire"></i> Body Sculpting</div><div class="service-item"><div class="service-name">Express Sculpt</div><div class="service-price">30 min - $99.00</div></div><div class="service-item"><div class="service-name">Body Sculpting Standard</div><div class="service-price">40 min $145 | 60 min $169</div></div><div class="service-item"><div class="service-name">Sculpt X Body Contour</div><div class="service-price">60 min $175 | 75 min $210</div></div><div class="service-item"><div class="service-name">Lipo Laser</div><div class="service-price">30 min - $75.00</div></div><div class="service-item"><div class="service-name">Brazilian Lymphatic Massage</div><div class="service-price">30 min $112.50 | 60 min $225</div></div></div></div>
+<div class="cta-card" style="background:#FEF6EA; border-radius:20px; padding:1rem; text-align:center; margin:1rem 0;"><button class="btn-book" onclick="showPanel('appointments')"><i class="fas fa-calendar-check"></i> Book Your Service Now</button></div>
+</div>
+
+<div id="productsPanel" class="section-panel">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+<div class="hero-badge" style="display:inline-block; margin:0; text-align:center;">✦ COMPLETE PRODUCT ARCHIVE ✦</div>
+<div class="cart-icon-container" style="position: relative; cursor: pointer;" onclick="showCart()">
+<i class="fas fa-shopping-cart" style="font-size: 1.3rem; color: #B8924A;"></i>
+<span id="cartCount" style="position: absolute; top: -8px; right: -12px; background: #B8924A; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.65rem; font-weight: bold; min-width: 18px; text-align: center;">0</span>
+</div>
+</div>
+<div class="section-title">All Professional Skincare Products (117 Items)</div>
+<div id="productsGrid" class="products-grid"></div>
+</div>
+<div id="productDetailPanel" class="product-detail-panel"><div id="productDetailContainer"></div></div>
+
+<div id="pamperPanel" class="section-panel">
+<div class="hero-badge" style="display:inline-block; margin:0 auto; text-align:center;">✦ PAMPER PARTIES ✦</div>
+<div class="section-title">Celebrate in Style</div>
+<div class="party-hero"><h2 style="font-family:Playfair Display;">Indulge in fun and relaxation!</h2><p>Join us for a group spa experience from the comfort of your own home or at our spa location.</p><button class="btn-book" style="margin-top:1rem;" onclick="document.getElementById('partyForm').scrollIntoView({behavior:'smooth'})"><i class="fas fa-calendar-alt"></i> PLAN MY PARTY</button></div>
+<h3 style="font-family:Playfair Display; text-align:center; margin:1rem 0;">Ready to Take Spa Time to the Next Level?</h3>
+<p style="text-align:center;">At SPA- Pamper Party Deluxe offers Blissful tranquility, for You and Your Friends.</p>
+<p style="text-align:center; margin:0.5rem 0;">Have a pamper party experience at our spa location. Book our standard Pamper Party for facials, massages and refreshments or select the Deluxe Pamper party to include extra services, refreshments and gift boxes for each guest!</p>
+<div style="text-align:center;"><button class="btn-book" onclick="showPanel('appointments')">Schedule Now →</button></div>
+<div class="testimonial"><i class="fas fa-quote-left" style="color:#B8924A; margin-right:8px;"></i> I was amazed at the spa treatment we had. They did an amazing job bringing the Relax Experience home.<div style="margin-top:8px; font-weight:600;">— Melissa</div></div>
+<h3 style="font-family:Playfair Display; text-align:center; margin:1.5rem 0;">PAMPER PARTY PACKAGES</h3>
+<div class="party-packages">
+<div class="party-card"><div class="party-card-header"><h3>In Spa Pamper Party</h3><div class="party-price">$150 - $175</div><div>Per Person</div><div style="font-size:0.7rem;">In Spa, located in Burbank.</div></div><div class="party-card-body"><p><strong>BACK TREAT MASSAGE 30 MIN.</strong><br>Our talented specialists will relieve stress and restore your sore muscles. Receive your choice of hot stones or back scrub.</p><p style="margin-top:8px;"><strong>FACIAL 30 MIN.</strong><br>Receive a professional facial from our award winning estheticians. You get cleansing, exfoliation, massage and masque. Your choice enzyme or glycolic treatment.</p><p style="margin-top:8px;">Refreshments are included.</p><p style="margin-top:8px; font-weight:600; color:#B8924A;">Upgrade to DELUXE PAMPER PARTY<br>Adds-on: Premium skincare treatments, Hydra-fusion or Micro Dermabrasion. Each guest gets a Relax Spa & Beauty gift bag.</p><button class="btn-book" style="width:100%; margin-top:1rem;" onclick="addToCart({id:'party_standard', name:'In-Spa Pamper Party', price:150})">Schedule Now →</button></div></div>
+<div class="party-card"><div class="party-card-header deluxe"><h3>Virtual Pamper Party</h3><div class="party-price">$79</div><div>Per Person</div><div style="font-size:0.7rem;">Join us on Zoom.</div></div><div class="party-card-body"><p><strong>SPA EXPERIENCE 90 MIN.</strong><br>Enjoy a guided facial, skincare lesson, pamper package and social time.</p><p style="margin-top:8px;">Share 60 minutes self care time with your friends and family near and far. With a Virtual Pamper Party. We've taken the most beneficial aspects of our spa facial and created an online spa experience for groups. Your session includes: Skincare products and social time (30 min) perfect for connection, group talks, games or adding a meditation or mindfulness exercise to the event.</p><p style="margin-top:8px;">Perfect for all occasions, the only thing you need is 6+ friends - we'll mail you and your guest the rest of the materials in a series of personalized Pamper Packages!</p><button class="btn-book" style="width:100%; margin-top:1rem;" onclick="addToCart({id:'party_virtual', name:'Virtual Pamper Party', price:79})">Schedule Now →</button></div></div>
+<div class="party-card"><div class="party-card-header"><h3>Corporate Pamper Party</h3><div class="party-price">$79 - $160</div><div>Per Person</div><div style="font-size:0.7rem;">In Spa or on Location.</div></div><div class="party-card-body"><p><strong>Services Include:</strong><br>Chair Massage<br>Mini Facials<br>Mindfulness or Meditation<br>Sound Bath Healing<br>Onsite Cabana Services</p><p style="margin-top:8px;">If you're looking for a team-building exercise or simply a way to reward your employees for all their hard work, a corporate pamper party is exactly what you're after.</p><p>Suitable for up to 100 participants, our corporate Pamper Parties can be 100% customized to the needs of your organization.</p><p style="margin-top:8px; font-size:0.7rem;"><strong>Previous clients include:</strong> Delta, United, Alaska, Southwest Airlines, Kaiser Permanente Hospitals and more...</p><button class="btn-book" style="width:100%; margin-top:1rem;" onclick="document.getElementById('partyForm').scrollIntoView({behavior:'smooth'})">Request Quote →</button></div></div>
+</div>
+<div style="text-align:center; margin:2rem 0; background:#FEF6EA; border-radius:24px; padding:1.5rem;"><h3 style="font-family:'Playfair Display';">YOUR PAMPER PARTY AWAITS</h3><p>Give the gift of relaxation</p><button class="btn-book" onclick="addToCart({id:'gift_card', name:'Relax Spa Gift Card', price:50})"><i class="fas fa-gift"></i> PURCHASE GIFT CARDS</button></div>
+<h3 style="font-family:'Playfair Display'; text-align:center; margin:1.5rem 0;">Pamper Party Extras</h3>
+<p style="text-align:center;">Add one of these great activities to your pamper party today!</p>
+<div class="extras-grid"><div class="extra-card"><i class="fas fa-music" style="font-size:2rem; color:#B8924A;"></i><h4>Sound Bath Healing</h4><p style="font-size:0.7rem;">Sound meditation that calms the soul and heals from within using Tibetan singing bowls, gongs or quartz crystal bowls.</p></div><div class="extra-card"><i class="fas fa-brain" style="font-size:2rem; color:#B8924A;"></i><h4>Mindfulness & Meditation</h4><p style="font-size:0.7rem;">Mindfulness is the awareness of something while meditation is the awareness of nothing - a state of letting go.</p></div></div>
+<div style="text-align:center; margin-bottom:1.5rem;"><button class="btn-book" onclick="showPanel('appointments')">Schedule & Upgrade →</button></div>
+<h3 style="font-family:'Playfair Display'; text-align:center; margin:1.5rem 0;">Frequently Asked Questions</h3>
+<div class="faq-grid"><div class="faq-item"><strong>Is there an Age Limit?</strong><br>Yes, guests must be 12+ for services, 16+ for body treatments.</div><div class="faq-item"><strong>What area do you cover?</strong><br>We serve Burbank and surrounding Los Angeles areas.</div><div class="faq-item"><strong>How many guest can be invited?</strong><br>Minimum 6 guests, maximum 20 for in-spa parties.</div><div class="faq-item"><strong>What should guest wear?</strong><br>Comfortable clothing, robes provided for treatments.</div><div class="faq-item"><strong>Are decorations included?</strong><br>Basic decorations available upon request. Custom decor available for additional fee.</div></div>
+<div id="partyForm" class="party-form"><h3 style="font-family:'Playfair Display'; text-align:center; margin-bottom:1rem;">PLAN YOUR PARTY</h3><form id="partyRequestForm" onsubmit="submitPartyRequest(event)"><div class="form-row"><div class="form-group"><label>First Name *</label><input type="text" id="firstName" required></div><div class="form-group"><label>Last Name *</label><input type="text" id="lastName" required></div></div><div class="form-row"><div class="form-group"><label>Email *</label><input type="email" id="email" required></div><div class="form-group"><label>Phone *</label><input type="tel" id="phone" required></div></div><div class="form-row"><div class="form-group"><label>Preferred Pamper Party Date *</label><input type="date" id="partyDate" lang="en" required><small>Please schedule your party 2 weeks in advance.</small></div><div class="form-group"><label>Type of Party *</label><select id="partyType"><option>In Spa Party (Burbank, CA)</option><option>Virtual Pamper Party</option><option>Corporate Pamper Party</option><option>Deluxe Pamper Party</option></select></div></div><div class="form-row"><div class="form-group"><label>How many guests will attend?</label><input type="number" id="guestCount" min="6" required><small>Minimum 6 guests required.</small></div><div class="form-group"><label>Questions / Comments / Requests</label><textarea id="comments" rows="3"></textarea></div></div><button type="submit" class="btn-book" style="width:100%; margin-top:1rem;"><i class="fas fa-paper-plane"></i> Submit Request →</button></form><p class="notice-card" style="margin-top:1rem; font-size:0.7rem; text-align:center;">After you submit your Pamper Party Request, one of our team members will get back to you to confirm the date you requested, go over details and deposit information.</p></div>
+</div>
+
+<div id="insidePanel" class="section-panel">
+<div class="hero-badge">✦ INSIDE THE SPA ✦</div>
+<div class="section-title">UPLIFTING DAY SPA</div>
+<div class="info-card">
+<p>Relax Spa & Beauty is an uplifting day spa in Burbank, California. We cultivate healthy skin and promote total-body wellness with results-oriented treatments. Our natural skincare services and body massages offer holistic self-care in a place of pure relaxation.</p>
+<p style="margin-top:1rem;">Our friendly, professionally trained estheticians and massage therapists are here to meet your needs and exceed your expectations. Whether you come solo or book a pamper party with friends, you'll feel rejuvenated and renewed. Welcome to our spa…an enjoyable experience is waiting for you!</p>
+</div>
+
+<!-- Spa Images Gallery -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+<div style="background: white; border-radius: 20px; padding: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(184,146,74,0.2);">
+<img src="https://relaxspaandbeauty.com/wp-content/uploads/2020/06/attachment_1591389624-6.jpeg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px;" alt="Relax Spa Interior">
+</div>
+<div style="background: white; border-radius: 20px; padding: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(184,146,74,0.2);">
+<img src="https://relaxspaandbeauty.com/wp-content/uploads/2020/06/attachment_1591389624-2.jpeg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px;" alt="Relax Spa Treatment Room" onerror="this.src='https://placehold.co/400x400/F2EBD9/B8924A?text=Spa+Image'">
+</div>
+<div style="background: white; border-radius: 20px; padding: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(184,146,74,0.2); text-align: center;">
+<img src="https://relaxspaandbeauty.com/wp-content/uploads/2021/02/relax-spa-and-beauty_circle.png" style="width: 100%; max-width: 180px; height: auto; border-radius: 50%; margin: 0 auto; display: block;" alt="Relax Spa & Beauty Logo">
+</div>
+</div>
+</div>
+
+<div id="appointmentsPanel" class="section-panel">
+<div class="hero-badge">✦ BOOK NOW ✦</div>
+<div class="section-title">Instant Booking</div>
+<iframe src="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVMuS2h0kYM8/RN/g0ArNjhHj1nuuDB/Ju6fTnFLw7GA6QBUTFHjJ0vEd70rtDzj4s4o4xd9NCfVnQMgZgO1w76QxepPm2MqUYUzSXR8AzPsDTX2OYTQyxyXY3eER1ulVgeHi9TUkZljaVO3UrNebzb/KXvRzm0cbIEVo+C2rNytWT6gglrYZgBMcQMigtiCRaG0OAGkDwTi8vBb73r8yM2TjEEo0+PkUKzOAfX2ryhvl39UUifHpVs44NzY5vtRhY0zWfo4+IKuMtGJL/zQGryd3crlBeZLdKa4hcKZ5elCOwFy4kEY3j9auT8LNWG4PLKf9rLIA+5QMqb+tCWwFMgmXG1UekgQr+RS1iXRsFguR0cDw7MIbfnG5vihF9vtluThpgb7XYCsat/aHwOgZ6u9jRXWJLFfGl7Ng7ZzHuUmuyPycmIT39RLbE46QAZxpzw==" frameborder="0" style="width:100%; height:600px; border-radius:20px;"></iframe>
+</div>
+
+<div id="cosharePanel" class="section-panel">
+<div class="hero-badge" style="display:inline-block; margin:0 auto; text-align:center;">✦ CO-SHARE ✦</div>
+<div class="section-title">The Beauty Co-Op</div>
+
+<div class="co-share-hero">
+<h2 style="font-family:Playfair Display; margin-bottom:1rem;">Relax Spa & Beauty in Burbank, CA</h2>
+<p>Has a great opportunity for wellness and beauty professionals looking for the freedom to operate their own business without high overhead.</p>
+<p style="margin-top:1rem;"><strong>Acupuncturist, nutritionist, lash technicians, body wraps, laser treatments, herbal remedies, or natural nail services is what we are looking for.</strong> If you're interested in finding a new location contact us!</p>
+</div>
+
+<div class="co-share-grid">
+<div class="co-share-card">
+<h3><i class="fas fa-dollar-sign"></i> Rental Options</h3>
+<ul>
+<li><i class="fas fa-check-circle"></i> Co-share a service room for as low as <strong>$400.00 per month</strong></li>
+<li><i class="fas fa-check-circle"></i> Rent a space just for your practice</li>
+<li><i class="fas fa-check-circle"></i> Daily rental also available</li>
+</ul>
+</div>
+<div class="co-share-card">
+<h3><i class="fas fa-building"></i> Amenities Include</h3>
+<ul>
+<li><i class="fas fa-user"></i> Full time receptionist</li>
+<li><i class="fas fa-clock"></i> 24 hour access</li>
+<li><i class="fas fa-wifi"></i> WiFi</li>
+<li><i class="fas fa-bolt"></i> Utilities (Electricity, Gas, and Water)</li>
+<li><i class="fas fa-coffee"></i> Break room with storage for tenants</li>
+<li><i class="fas fa-tshirt"></i> Common area laundry</li>
+<li><i class="fas fa-restroom"></i> Common area restrooms</li>
+<li><i class="fas fa-video"></i> Video Security System</li>
+<li><i class="fas fa-calendar-alt"></i> Listing on our online booking system (Optional)</li>
+</ul>
+</div>
+</div>
+
+<div class="co-share-form">
+<h3 style="font-family:'Playfair Display'; text-align:center; margin-bottom:1rem;">Co-Share Inquiry</h3>
+<p style="text-align:center; margin-bottom:1.5rem;">Please fill out the form below to inquire about the Beauty Co-Op Co-Share opportunities here at Relax Spa & Beauty. We will contact you shortly...</p>
+<p style="text-align:center; margin-bottom:1.5rem; background:#FEF6EA; padding:0.8rem; border-radius:16px; font-size:0.8rem;">You will be required to submit the following documents before being approved to rent one of our spaces:<br>✓ Valid Technician's License<br>✓ Business Liability Insurance</p>
+
+<form id="coshareRequestForm" onsubmit="submitCoShareRequest(event)">
+<div class="form-row">
+<div class="form-group"><label>First Name *</label><input type="text" id="coshareFirstName" required></div>
+<div class="form-group"><label>Last Name *</label><input type="text" id="coshareLastName" required></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Email *</label><input type="email" id="coshareEmail" required></div>
+<div class="form-group"><label>Phone *</label><input type="tel" id="cosharePhone" required></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>What type of business do you have? *</label><input type="text" id="coshareBusinessType" required placeholder="e.g., Acupuncture, Lash Technician, Nutritionist, etc."></div>
+<div class="form-group"><label>How many years have you been in business? *</label><input type="text" id="coshareYears" required placeholder="e.g., 3 years"></div>
+</div>
+<div class="form-group"><label>Website</label><input type="url" id="coshareWebsite" placeholder="https://yourwebsite.com"></div>
+<button type="submit" class="btn-book" style="width:100%; margin-top:1rem;"><i class="fas fa-paper-plane"></i> Submit Inquiry →</button>
+</form>
+<p class="notice-card" style="margin-top:1rem; font-size:0.7rem; text-align:center;">After you submit your Co-Share Inquiry, one of our team members will contact you within 24-48 hours to discuss opportunities and schedule a tour.</p>
+</div>
+</div>
+
+<div id="policyPanel" class="section-panel">
+<div class="hero-badge">✦ OUR POLICY ✦</div>
+<div class="section-title">Policies & Information</div>
+
+<div class="info-grid" style="grid-template-columns: 1fr;">
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Late Appointment</h3>
+<p>In order to enjoy every minute of your service, please arrive 15 minutes prior to insure that your service does not run short on time.</p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Cancellation</h3>
+<p>A credit card number will be taken for all appointments. Please make cancellation 24 hours prior to your scheduled service to avoid cancellation charge. If appointments are not cancelled within our designated time frame, appoints will be charged in full. Thank you.</p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Return Checks</h3>
+<p>A $25.00 fee will be added to all returned checks.</p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Payment</h3>
+<p>We accept ATM and all major credit cards.</p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Gift Cards/Certificates</h3>
+<p>Gift cards and certificates are not refundable and must be presented at the time service is rendered. Certificates or gift cards, which are lost, misplaced or stolen, are not refundable, replaceable nor valid.</p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Relax Spa Appointments</h3>
+<p>To schedule your appointment, please call: <strong>(818) 557-0024</strong><br>or email: <strong>relaxappointment@yahoo.com</strong><br>or schedule online by going to: <strong>Book Now</strong></p>
+</div>
+
+<div class="info-card">
+<h3 style="font-family:'Playfair Display'; color:#B8924A; margin-bottom:0.8rem;">Business Hours</h3>
+<p>Open 7 days a week.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+<div class="cart-content">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<button class="close-cart" onclick="closeCart()">&times;</button>
+</div>
+<div id="cartItemsContainer"></div>
+<div class="cart-buttons">
+<button class="btn-book" onclick="checkout()">Proceed to Checkout</button>
+<button class="btn-book" style="background:transparent; border:1px solid #B8924A; color:#B8924A;" onclick="closeCart()">Continue Shopping</button>
+</div>
+</div>
+</div>
+
+<!-- Chat Widget -->
+<div class="chat-widget-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+    <button class="chat-toggle-btn" id="chatToggleBtn">
+        💬
+    </button>
+    
+    <div class="chat-window" id="chatWindow" style="position: absolute; bottom: 70px; right: 0; width: 300px; height: 420px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: none; flex-direction: column; overflow: hidden; border: 1px solid rgba(184,146,74,0.3);">
+        <div class="chat-header" style="background: linear-gradient(135deg, #B8924A, #9B783E); padding: 12px 15px; color: white; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <strong style="font-size: 14px;">Relax Spa Assistant</strong>
+                <p style="font-size: 10px; margin: 0; opacity: 0.9;">Ask us anything! 🌸</p>
+            </div>
+            <button class="close-chat" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer; line-height: 1;">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages" style="flex: 1; padding: 12px; overflow-y: auto; background: #FDF8F0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="message bot">
+                🌊 Hey sunshine! Welcome to Relax Spa & Beauty. Ask about massages, facials, body sculpting, parties, or anything else!
+            </div>
+        </div>
+        <div class="chat-input-area" style="display: flex; padding: 10px; border-top: 1px solid #E8DDD0; background: white; gap: 8px;">
+            <input type="text" id="chatInput" placeholder="Type your message..." style="flex: 1; padding: 8px 12px; border: 1px solid #E8DDD0; border-radius: 25px; outline: none; font-size: 12px;">
+            <button id="sendChatBtn" style="background: linear-gradient(135deg, #B8924A, #9B783E); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 14px;">➤</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// COMPLETE PRODUCT DATABASE - 117 PRODUCTS TOTAL
+const PRODUCTS = [
+// First 101 products from original
+{id: "p1", name: "Age Defying Boosting Pads", price: 75, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/09/AgeDefyingBoostingPads.webp", desc: "An anti-aging skin enhancer designed to target skin aging in 9 different ways."},
+{id: "p2", name: "BIO CAVIAR CREME", price: 105, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_caviarcreme_front.jpg", desc: "Decadent rich hydrating creme with Caviar, Silver, Gold and Madonna Lily Plant Stem Cells."},
+{id: "p3", name: "Bio Enzyme Cleanser", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_enzyme_cleanser.png", desc: "Gentle gel cleanser for all skin types."},
+{id: "p4", name: "Clear Skin Boosting Pads", price: 65, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/09/ClearSkinBoostingPads.webp", desc: "Anti-acne, anti-oil skin enhancer designed to increase clear skin results."},
+{id: "p5", name: "HEALTH RECOVERY BALM", price: 39, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_caviarcrme_front.jpg", desc: "A universal first aid gel and hydrator. Ultra-hydrating and infused with Gold and Silver Minerals."},
+{id: "p6", name: "ICE Balancing Lotion", price: 48, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/ice_balancing_lotion.png", desc: "Regain skin balance with this daily oil controlling lotion. Provides lightweight hydration with a matte finish."},
+{id: "p7", name: "ICE Clarifying Treatment", price: 40, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/ice_clarifying_treatment.png", desc: "Control oily skin and treat active acne with this intense complexion clearing spot treatment."},
+{id: "p8", name: "ICE Refining Masque", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/ice_refining_masque_1.png", desc: "Refine pores and reduce oil production with this soothing clay based masque."},
+{id: "p9", name: "ICE Sal Cleanser", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/ice_sal_cleanser_1.png", desc: "Refresh skin with this cooling and oil reducing cleanser formulated with Salicylic Acid."},
+{id: "p10", name: "MYSTIQ ILUMINATING BEAUTY OIL", price: 69, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_hydra_infusion_front.png", desc: "Indulge your skin with this lightweight luxurious hydrating oil. Provides luminous results."},
+{id: "p11", name: "Mystiq Lifting Masque", price: 35, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/mystiq_lifting_masque_1.png", desc: "Lavishly lift, tighten and illuminate skin on the face, neck and décolleté with this instant elevating treatment."},
+{id: "p12", name: "MYSTIQ PERFECTING EYE CRÈME", price: 56, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_caviarcrme_front.jpg", desc: "Restore exquisite eyes with this multi-tasking miracle. Diminishes dark circles, brightens skin."},
+{id: "p13", name: "PRO ANTI-AGING PADS", price: 55, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/pro_anti_aging_pads_1.png", desc: "This cutting-edge at-home treatment delivers the peel, peptide and probiotic experience."},
+{id: "p14", name: "PRO C4 RETINOL SERUM", price: 69, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/08/pro_c4_retinol_serum.png", desc: "Refine and strengthen skin with this powerful Vitamin C and Retinol serum."},
+{id: "p15", name: "PRO LITE SERUM", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/pro_retinol_creme.png", desc: "Discover a vivid complexion with this potent brightening serum."},
+{id: "p16", name: "PRO RETINOL CRÈME", price: 95, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/pro_retinol_creme.png", desc: "A revolutionary resurfacing crème for smoother, brighter and younger looking skin."},
+{id: "p17", name: "Pure Everyday Cleanser", price: 37, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/07/Societe-PureEverydayCleanser_500x500.webp", desc: "A gentle, antioxidant-rich daily cleanser. Maintains the skin's natural barrier function."},
+{id: "p18", name: "Restorative Neck Sculpting Cream", price: 99, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/09/RestorativeNeckSculptingCream.webp", desc: "A hydrating cream for the neck and décolletage. Helps firm and smooth delicate skin."},
+{id: "p19", name: "Skin Bright Boosting Pads", price: 75, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/09/ClearSkinBoostingPads-1.webp", desc: "A skin brightening enhancer designed to increase more even skin color results."},
+{id: "p20", name: "Skin Script Charcoal Clay Cleanser", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/ss043_media-6.5-oz.default.png", desc: "Infused with charcoal and kaolin clay to absorb environmental toxins."},
+{id: "p21", name: "SPF SOLAR SHIELD 30 OIL FREE", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/spf_solar_shield_30_oil_free.png", desc: "Shield your skin from harmful sun damage with this lightweight UVA/UVB protection."},
+{id: "p22", name: "Superfruit Enzyme Exfoliator", price: 42, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/07/Societe-Superfruit2oz_500x500.webp", desc: "Gently lifts and exfoliates dead skin cells with Mangosteen, Goji, Noni and Cranberry Superfruits."},
+{id: "p23", name: "Ultimate Eye Lift System", price: 108, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/07/Societe-UltimateEyeLift_500x500.webp", desc: "Two-step regimen for firm, plump, hydrated skin around eyes."},
+{id: "p24", name: "Vitamin D Complex", price: 80, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/07/Societe-VitaminDComplexwithBox_1_750x750.webp", desc: "Hydrating day cream with Vitamin D to repair damaged skin."},
+{id: "p25", name: "Skin Script Glycolic Cleanser", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ss003_media-6.5-oz..png", desc: "Foamy cleanser infused with alpha hydroxy acids. Renews skin by removing dead skin cells."},
+{id: "p26", name: "Skin Script Green Tea Citrus Cleanser", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ss034_media-6.5-oz..png", desc: "Gentle cleansing option for environmentally challenged skin."},
+{id: "p27", name: "Skin Script Pomegranate Antioxidant Cleanser", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ss001_media-6.5-oz..png", desc: "Cream-based cleanser with antioxidants, nutritional elements, and oils to restore and protect."},
+{id: "p28", name: "Skin Script Glycolic and Retinol Pads", price: 22, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/glycolic-retinol-pads.png", desc: "Gentle pads for brightening, clarifying, and restoring benefits to all skin types."},
+{id: "p29", name: "Skin Script Clarifying Toner Pads", price: 22, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/clarifying-pads.png", desc: "Purifying pads to relieve breakouts while improving the clarity and quality of the skin."},
+{id: "p30", name: "Skin Script Ageless Hydrating Serum", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ageless-hydrating-syrum.png", desc: "Encourages firm, plump appearance. Hyaluronic acid attracts and binds moisture for extra hydration."},
+{id: "p31", name: "Skin Script Retinaldehyde Serum", price: 60, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/ss041_media-1-oz.jpg", desc: "Ultimate anti-aging serum for evening cell repair. Treats skin cell health, brightens and tones tissue."},
+{id: "p32", name: "Skin Script Peptide Eye Serum", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/peptide-eye-cream.png", desc: "Opens the eye zone for refreshed, youthful appearance. Brightens discolorations, reduces wrinkles."},
+{id: "p33", name: "Skin Script Vitamin C Green Tea Serum", price: 40, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/vitamin-c-syrum.png", desc: "15% Vitamin C serum with CoQ10 and Peptides. Reduces wrinkles, brightens tissue, antioxidant protection."},
+{id: "p34", name: "Skin Script Cucumber Hydration Toner", price: 22, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/ss035_media-3.3-oz..png", desc: "Nourishes dehydrated skin while improving cellular functions. Soothing and calming with cucumber extract."},
+{id: "p35", name: "Skin Script Mint Refining Toner", price: 22, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin_script_mint_refining_toner_3.3oz.webp", desc: "Contains probiotic to normalize skin flora, reduce redness and minimize pores."},
+{id: "p36", name: "Skin Script Citrus-C Nourishing Cream", price: 44, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/ss047_media-1-oz..jpg", desc: "Gentle yet powerful vitamin C cream that firms skin, brightens dark spots, boosts collagen."},
+{id: "p37", name: "Skin Script Tri-Peptide Eye Cream", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin-script-tri-peptide-eye-cream.webp", desc: "Alleviates eye problems, reduces signs of fatigue while lifting skin for lively, youthful eyes."},
+{id: "p38", name: "Skin Script Peptide Restoration Moisturizer", price: 55, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin_script_peptide_moisturizer_1.webp", desc: "Advanced moisturizer that repairs damaged skin and accelerates production of healthy new cells."},
+{id: "p39", name: "Skin Script Ageless Skin Moisturizer", price: 18, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ageless-moisturisor.png", desc: "Provides hydration without heavy feel. Protects from environmental damage while relieving surface signs of aging."},
+{id: "p40", name: "Skin Script Cacteen Moisturizer", price: 30, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/06/copy-of-untitled-35.png", desc: "For normal/combination and sensitive skin. Balances surface lipids with Prickly Pear cactus and olive oil."},
+{id: "p41", name: "Skin Script Light Aloe Moisturizer", price: 18, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin_script_light_aloe_moisturizer_1.webp", desc: "Weightless formula rapidly absorbed. Perfect for oily, troublesome skin. Non-comedogenic."},
+{id: "p42", name: "Skin Script Acai Berry Moisturizer", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/ss024_media-1.7-oz.jpg", desc: "Provides hydration and protects from environmental damage. Improves skin hydration to limit visible lines."},
+{id: "p43", name: "Skin Script Hydrating Moisturizer", price: 25.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/hydrating-moisturisor.png", desc: "Improves wrinkles with intense hydration. Binds moisture to reduce wrinkle depth, boosts collagen."},
+{id: "p44", name: "Skin Script Raspberry Refining Scrub", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ss038_media-4-oz.png", desc: "Polishes and energizes with raspberry and marionberry antioxidants. Jojoba beads gently exfoliate."},
+{id: "p45", name: "Skin Script Retinol Exfoliating Scrub Mask", price: 44, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/retinol-mask.png", desc: "Gentle yet powerful cellular turnover. Retinol and jojoba beads clean, soothe and polish skin."},
+{id: "p46", name: "Skin Script Sheer Protection SPF 30", price: 26.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin-script-sheer-protection-spf-30.webp", desc: "Sheer, lightweight sunblock that nourishes skin while protecting from harmful UV rays."},
+{id: "p47", name: "Skin Script The Creamy Restore Four", price: 164, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/TheCreamyRestoreFour.webp", desc: "Complete 4 piece kit for aging skin. Reduces redness, encourages cell turnover, hydrates."},
+{id: "p48", name: "Skin Script Minimalist Kit", price: 39.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin_script_minimalist_kit.webp", desc: "Best for oily and combination skin types, especially teens. Simple, effective skincare routine."},
+{id: "p49", name: "Skin Script The Lite Restore Four Kit", price: 160, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/TheLiteRestoreFour.webp", desc: "Complete 4 piece kit for aging skin with lightweight ingredients."},
+{id: "p50", name: "Skin Script Plump & Protect Creamy Kit", price: 47, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/SS050-C_media-01.png", desc: "Improves hydration for normal to dry skin. Reduces fine lines and firms eye area."},
+{id: "p51", name: "Dermalogica PreCleanse", price: 47, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/PreCleanse_5.0oz_2048x2048.jpg", desc: "Deep-cleansing oil melts makeup and impurities. Ideal even for oily skin conditions."},
+{id: "p52", name: "Dermalogica Intensive Moisture Cleanser", price: 39.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Intensive-Moisture-Cleanser_10oz.webp", desc: "Light, creamy cleanser for dry, depleted skin. Removes impurities while actively nourishing."},
+{id: "p53", name: "Dermalogica Special Cleansing Gel", price: 48, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/specialcleansinggel_8.4oz_2048x2048.jpg", desc: "Soap-free foaming gel for all skin conditions. Refreshing lather removes impurities."},
+{id: "p54", name: "Dermalogica Blackhead Clearing Fizz Mask", price: 23, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/fizz_mask_2048x2048.jpg", desc: "Active fizzing formula clears pores and helps target blackheads."},
+{id: "p55", name: "Dermalogica Barrier Repair", price: 49, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/Barrier-Repair_1oz_2048x2048.jpg", desc: "Velvety moisturizer fortifies sensitized skin with damaged barrier."},
+{id: "p56", name: "Dermalogica Circular Hydration Serum", price: 69, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Dermalogica_circular_hydration_serum.webp", desc: "Long-lasting serum floods skin with hydration. Enhanced Hyaluronic Acid for deep hydration."},
+{id: "p57", name: "Dermalogica Daily Microfoliant", price: 64, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/Daily-Microfoliant_8.4oz_2048x2048.jpg", desc: "Rice-based exfoliating powder for brighter, smoother skin. Gentle enough for daily use."},
+{id: "p58", name: "Dermalogica Multi-Active Toner", price: 39, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/multi-active-toner.jpg", desc: "Ultra-light facial spritz that refreshes and hydrates while smoothing the surface."},
+{id: "p59", name: "Dermalogica Active Moist", price: 43, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/active-moist.jpg", desc: "Lightweight oil-free lotion for daily moisture protection."},
+{id: "p60", name: "Dermalogica Skin Smoothing Cream", price: 44, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/skin-smoothing-cream.jpg", desc: "Rich emollient cream for dry, stressed skin."},
+{id: "p61", name: "Dermalogica Intensive Moisture Balance", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/intensive-moisture-balance.jpg", desc: "Nourishing moisturizer that provides essential lipids."},
+{id: "p62", name: "Dermalogica Antioxidant HydraMist", price: 37, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/antioxidant-hydramist.jpg", desc: "Antioxidant shield with flash-firming properties. Fights free radicals and hydrates."},
+{id: "p63", name: "Dermalogica Super Rich Repair", price: 78, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/super-rich-repair.jpg", desc: "Heavyweight cream for chronically dry, prematurely-aging skin."},
+{id: "p64", name: "Dermalogica Tri-Active Cleanse", price: 38, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/tri-active-cleanse.jpg", desc: "Professional-grade triple-action cleanser refines skin texture."},
+{id: "p65", name: "Dermalogica Powerfoliant 2", price: 65, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/powerfoliant2.jpg", desc: "High-potency chemical exfoliant for rapid skin resurfacing."},
+{id: "p66", name: "Dermalogica Protection 50 Sport SPF50", price: 49, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Protection-50-Sport_5.3oz.webp", desc: "Water-resistant Broad Spectrum sun protection."},
+{id: "p67", name: "Dermalogica UltraCalming Cleanser", price: 39.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2013/12/dermalogica-ultracalming-cleanser.jpg", desc: "Gentle cream cleanser that soothes sensitized skin."},
+{id: "p68", name: "Dermalogica Hyaluronic Ceramide Mist", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica_hyaluronic_cermide_mist.webp", desc: "Long-lasting hydrating mist with Hyaluronic Acid and ceramides."},
+{id: "p69", name: "Dermalogica Invisible Physical Defense SPF 30", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Invisible-Physical-Defense_1.7oz.webp", desc: "Weightless defense with non-nano Zinc Oxide. Provides blue light protection."},
+{id: "p70", name: "Dermalogica Prisma Protect SPF 30", price: 66, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica_prisma_protect_spf30.webp", desc: "Light-activated moisturizer with broad spectrum defense."},
+{id: "p71", name: "Dermalogica Charcoal Rescue Masque", price: 49, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/06/copy-of-untitled-33.png", desc: "All-in-one masque detoxifies, brightens and invigorates normal to oily skin."},
+{id: "p72", name: "Dermalogica Skin Hydrating Masque", price: 39, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/skin-hydrating-masque.webp", desc: "Moisturizing masque for dry, stressed skin. Reduces appearance of fine lines."},
+{id: "p73", name: "Dermalogica Skin Soothing Hydration Lotion", price: 24, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica-skin-soothing-hydration-lotion.png", desc: "Soothing, hydrating relief for dehydrated, breakout-irritated skin."},
+{id: "p74", name: "Dermalogica Breakout Cleaning Foaming Wash", price: 19.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/foaming_wash_6oz_white_2048x2048.png", desc: "Deep cleans and purifies skin. Clears dead skin cells and excess oils."},
+{id: "p75", name: "Dermalogica Clear Start SPF30", price: 29, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/clearing_defense_2048x2048.jpg", desc: "Shine-reducing SPF moisturizer for breakout-prone skin."},
+{id: "p76", name: "Dermalogica Age Defense Kit", price: 58, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica-age-defense-kit.png", desc: "Defends against elements and fights premature skin aging."},
+{id: "p77", name: "Dermalogica Breakout Clearing Kit", price: 29.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica_breakout_clearing_kit.webp", desc: "3-step regimen for clearer skin. Cleanses, treats breakouts, and hydrates."},
+{id: "p78", name: "Dermalogica Sensitive Skin Rescue Kit", price: 39.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica-sensitive-skin-rescue-kit.png", desc: "Calms, soothes, hydrates and defends sensitive skin against flare-ups."},
+{id: "p79", name: "Dermaki Acne Cleanser", price: 27.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/4oz-Acne-Cleanser_clipped_rev_1.png", desc: "Low foaming lotion cleanser for acneic skin. Gently cleans and pulls out impurities."},
+{id: "p80", name: "Dermaki Hydrating Cleanser", price: 27.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/Hydrating-Cleanser-scaled-1.jpg", desc: "Low-foaming peptide-enriched cleanser. Strengthens as it cleans to tone and beautify."},
+{id: "p81", name: "Dermaki Acne Mist", price: 15, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/12/Acne-Mist-1-scaled-1.jpg", desc: "Potent acne-fighting spray. Ideal for preventing and healing breakouts."},
+{id: "p82", name: "Dermaki Sensitive Face & Body Bar", price: 17.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Sensitive-Face-and-Body-Bar-4oz.png", desc: "Formulated for most sensitive skin. Packed with green tea and tamanu oil."},
+{id: "p83", name: "Dermaki Luxurious Face and Body Bar", price: 17.50, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/Luxurious-Bar-scaled-1.jpg", desc: "Skin treatment in a cleansing bar. Gentle, all-natural formula purifies and protects."},
+{id: "p84", name: "Dermaki Balance Toner", price: 30, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Balance-scaled-1.jpg", desc: "Hydrates, brightens, and firms skin. Gentle exfoliating action aids absorption."},
+{id: "p85", name: "Dermaki Sensitive Balance Toner", price: 30, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Sensitive-Balance-scaled-1.jpg", desc: "Hydrating toner for sensitive skin. Gentle exfoliating action calms and balances."},
+{id: "p86", name: "Dermaki Exfoliating Powder", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Exfoliating-Powder_clipped_rev_1-1.png", desc: "Gentle deep cleansing for dull, acne-prone, or aging skin."},
+{id: "p87", name: "Dermaki Vitamin A Complex", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Vitamin-A-Complex-scaled-1.jpg", desc: "Improves skin tone, reduces wrinkles, and helps acne. Repairs damaged skin."},
+{id: "p88", name: "Dermaki Vitamin C Complex", price: 49, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Vitamin-C-Complex-scaled-1.jpg", desc: "Combats visible signs of aging. Gives tired skin instant antioxidant dewiness."},
+{id: "p89", name: "Dermaki Soothe", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/1oz-Soothe_clipped_rev_1.png", desc: "Helps regenerate and heal. Formulated to calm irritated skin."},
+{id: "p90", name: "Dermaki Nourish", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Nourish-scaled-1.jpg", desc: "Vitamin-rich daily moisturizer. Non-greasy texture smooths and preps skin."},
+{id: "p91", name: "Dermaki Age Perfect", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Age-Perfect-1oz.png", desc: "Hydrating formula with peptides, vitamins, and essential oils for wrinkles."},
+{id: "p92", name: "Dermaki Sensitive Age Perfect", price: 59, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/MG_3433_clipped_rev_1.png", desc: "Hydrating formula for sensitive skin with peptides and essential oils."},
+{id: "p93", name: "Dermaki Daily Facial Moisturizer", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/Daily-Moisturizer-scaled-1.jpg", desc: "Vitamin-enriched moisturizer for normal/dry skin. Hydrates and soothes."},
+{id: "p94", name: "Dermaki Daily Moisturizing Cream", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Moisturizing-Cream-scaled-1.jpg", desc: "Non-greasy cream with ultra-nourishing ingredients. Ideal for mature skin."},
+{id: "p95", name: "Dermaki Intense Hydration", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/4oz-Intense-Hydration_clipped_rev_1.png", desc: "Vitamin-enriched hydration for normal to mature skin. Hyaluronic acid reduces wrinkles."},
+{id: "p96", name: "Dermaki CBD Daily Facial Moisturizer", price: 45, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/CBD-Daily-Moisturizer-scaled-1.jpg", desc: "Vitamin-enriched moisturizer with CBD. Hydrates, tones, and brightens."},
+{id: "p97", name: "Le Mieux Oh My Glow Activator", price: 35, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/OhMyGlow_activator_49127.1620692173.800.800.jpg", desc: "Activator with kombucha and manganese. Mix with serum in oxygen infuser."},
+{id: "p98", name: "Le Mieux Oh My Glow Serum", price: 110, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/OhMyGlow_serum_46210.1620693183.300.300.jpg", desc: "Hya10+ Complex with 10 sizes of hyaluronic acid. Volumizes skin with diamond powder."},
+{id: "p99", name: "LightStim for Acne", price: 169, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/ProductHero-Acne_3985x4472_0ptimage_1080x.jpg", desc: "Blue light destroys acne-causing bacteria."},
+{id: "p100", name: "7E MyoLift Mini", price: 284, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/image1.jpeg", desc: "Microcurrent facial machine for anti-aging."},
+{id: "p101", name: "ZOE Bliss", price: 145, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/Hot-Pink-Back_540x.jpg", desc: "Sonic device with 7000 micro-pulsations."},
+// ADDITIONAL 16 PRODUCTS to reach 117 total
+{id: "p102", name: "Hydrating Lip Treatment", price: 32, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_hydra_infusion_front.png", desc: "Hydrating lip treatment that restores moisture for softer, fuller and supple lips."},
+{id: "p103", name: "Skin Script Ageless Eye Cream", price: 42, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/peptide-eye-cream.png", desc: "Targets fine lines and wrinkles around the delicate eye area with peptides and antioxidants."},
+{id: "p104", name: "Dermalogica Sound Sleep Cocoon", price: 68, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica_circular_hydration_serum.webp", desc: "Nighttime gel-cream that supports skin's overnight restoration for a refreshed look."},
+{id: "p105", name: "Bio Hydra Infusion", price: 89, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_hydra_infusion_front.png", desc: "Intense hydration treatment with hyaluronic acid and plant stem cells for plump, dewy skin."},
+{id: "p106", name: "ICE Post Procedure Cream", price: 52, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/ice_balancing_lotion.png", desc: "Calming cream designed for post-treatment recovery. Reduces redness and irritation."},
+{id: "p107", name: "Mystiq Diamond Polish", price: 48, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/10/mystiq_lifting_masque_1.png", desc: "Gentle exfoliating polish with diamond powder for instant radiance and smoothness."},
+{id: "p108", name: "PRO Vitamin C Booster", price: 62, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/08/pro_c4_retinol_serum.png", desc: "Concentrated vitamin C powder that activates with your favorite serum for brightening boost."},
+{id: "p109", name: "Skin Script Pumpkin Enzyme Mask", price: 38, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/retinol-mask.png", desc: "Pumpkin enzymes gently exfoliate while antioxidants nourish and revitalize dull skin."},
+{id: "p110", name: "Dermalogica BioLumin-C Serum", price: 89, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Dermalogica_circular_hydration_serum.webp", desc: "Advanced vitamin C serum that boosts luminosity and fights environmental damage."},
+{id: "p111", name: "Dermaki Retinol Renewal", price: 65, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/Vitamin-A-Complex-scaled-1.jpg", desc: "Time-released retinol for gentle yet effective renewal of aging and damaged skin."},
+{id: "p112", name: "Le Mieux Collagen Peptide Mask", price: 55, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/10/OhMyGlow_serum_46210.1620693183.300.300.jpg", desc: "Sheet mask infused with collagen peptides for firming and hydrating benefits."},
+{id: "p113", name: "Relax Spa Aromatherapy Mist", price: 28, img: "https://relaxspaandbeauty.com/wp-content/uploads/2014/09/gift-certificates-trans-cropped1.png", desc: "Calming lavender and chamomile mist to soothe the senses and refresh the skin."},
+{id: "p114", name: "CBD Recovery Balm", price: 72, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/11/CBD-Daily-Moisturizer-scaled-1.jpg", desc: "Full-spectrum CBD with arnica and menthol for sore muscle relief and skin recovery."},
+{id: "p115", name: "Gold Infused Eye Masks", price: 24, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_caviarcreme_front.jpg", desc: "Luxurious gold-infused hydrogel eye masks that depuff and brighten tired eyes."},
+{id: "p116", name: "Scalp Renewal Treatment", price: 42, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/ss001_media-6.5-oz..png", desc: "Nourishing scalp treatment with peppermint and biotin for healthier hair and scalp."},
+{id: "p117", name: "Relax Spa Signature Candle", price: 38, img: "https://relaxspaandbeauty.com/wp-content/uploads/2014/09/gift-certificates-trans-cropped1.png", desc: "Soy wax candle with essential oils of eucalyptus and lavender to create spa ambiance at home."}
+];
+
+let cart = [];
+
+function updateCartCount() {
+    const cartCountSpan = document.getElementById('cartCount');
+    if (cartCountSpan) {
+        cartCountSpan.textContent = cart.length;
+    }
+}
+
+function showToast(msg) {
+    let t=document.createElement('div');
+    t.className='toast';
+    t.innerHTML = '<i class="fas fa-check-circle"></i> ' + msg;
+    document.body.appendChild(t);
+    setTimeout(()=>t.remove(),2000);
+}
+
+function addToCart(item) {
+    cart.push(item);
+    localStorage.setItem('relax_cart', JSON.stringify(cart));
+    updateCartCount();
+    showToast(item.name + ' added to cart');
+}
+
+function showCart() {
+    const modal = document.getElementById('cartModal');
+    const container = document.getElementById('cartItemsContainer');
+    
+    if (cart.length === 0) {
+        container.innerHTML = '<div class="empty-cart">Your cart is empty. Start adding some products!</div>';
+    } else {
+        let total = 0;
+        container.innerHTML = cart.map((item, index) => {
+            total += item.price;
+            return `
+                <div class="cart-item">
+                    <div class="cart-item-name">${escapeHtml(item.name)}</div>
+                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                    <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
+                </div>
+            `;
+        }).join('');
+        container.innerHTML += `<div class="cart-total">Total: $${total.toFixed(2)}</div>`;
+    }
+    
+    modal.classList.add('active');
+}
+
+function closeCart() {
+    document.getElementById('cartModal').classList.remove('active');
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('relax_cart', JSON.stringify(cart));
+    updateCartCount();
+    showCart(); // Refresh cart display
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        showToast("Your cart is empty. Add some items first!");
+        return;
+    }
+    // Open email with cart details
+    let cartDetails = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    let subject = encodeURIComponent("New Order - Relax Spa & Beauty");
+    let body = encodeURIComponent(
+        `NEW ORDER\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+        `ITEMS ORDERED:\n${cartDetails}\n\n` +
+        `TOTAL: $${total.toFixed(2)}\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+        `Submitted from Relax Spa & Beauty Website\n` +
+        `Please contact customer to process payment and arrange pickup/shipping.`
+    );
+    window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
+    showToast("✓ Opening your email app! Please send the order details to complete your purchase.");
+    // Optionally clear cart after checkout
+    // cart = [];
+    // updateCartCount();
+    // closeCart();
+}
+
+function escapeHtml(s) {
+    if(!s) return '';
+    return s.replace(/[&<>]/g, function(m) {
+        if(m === '&') return '&amp;';
+        if(m === '<') return '&lt;';
+        if(m === '>') return '&gt;';
+        return m;
+    });
+}
+
+function showProductDetail(productId) {
+    const product = PRODUCTS.find(p => p.id === productId);
+    if (!product) return;
+    const container = document.getElementById('productDetailContainer');
+    if(!container) return;
+    container.innerHTML = '<div style="background:white; border-radius:24px; padding:1.5rem;">' +
+        '<button class="btn-book" style="background:transparent; color:#B8924A; margin-bottom:1rem;" onclick="showPanel(\'products\')"><i class="fas fa-arrow-left"></i> Back to products</button>' +
+        '<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">' +
+        '<img src="' + product.img + '" style="width:100%; border-radius:20px; height:300px; object-fit:cover;" onerror="this.src=\'https://placehold.co/400x400/F2EBD9/B8924A?text=' + encodeURIComponent(product.name.slice(0,15)) + '\'">' +
+        '<div><h1 style="font-family:Playfair Display; font-size:1.8rem;">' + escapeHtml(product.name) + '</h1>' +
+        '<div style="font-size:1.5rem; color:#B8924A; font-weight:700;">$' + product.price.toFixed(2) + '</div>' +
+        '<p style="margin:1rem 0; line-height:1.5;">' + escapeHtml(product.desc) + '</p>' +
+        '<button class="btn-book" style="padding:10px 24px;" onclick="addToCart({id:\'' + product.id + '\', name:\'' + escapeHtml(product.name).replace(/'/g, "\\'") + '\', price:' + product.price + '})">Add to Cart</button></div></div>' +
+        '<div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(184,146,74,0.1);"><h3>You May Also Like</h3><div id="recGrid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.8rem; margin-top:0.8rem;"></div></div></div>';
+    const recs = PRODUCTS.filter(p => p.id !== productId).sort(() => 0.5 - Math.random()).slice(0, 4);
+    const recGrid = document.getElementById('recGrid');
+    if(recGrid) {
+        recGrid.innerHTML = recs.map(r => '<div style="background:#FEFAF3; border-radius:16px; padding:0.5rem; text-align:center; cursor:pointer;" onclick="showProductDetail(\'' + r.id + '\')"><img src="' + r.img + '" style="width:100%; height:80px; object-fit:cover; border-radius:12px;" onerror="this.src=\'https://placehold.co/400x400/F2EBD9/B8924A?text=' + encodeURIComponent(r.name.slice(0,10)) + '\'"><strong style="font-size:0.7rem;">' + escapeHtml(r.name) + '</strong><br><span style="color:#B8924A;">$' + r.price.toFixed(2) + '</span></div>').join('');
+    }
+    document.querySelectorAll('.section-panel, .product-detail-panel').forEach(p => p.classList.remove('active-panel'));
+    document.getElementById('productDetailPanel').classList.add('active-panel');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    if(grid) {
+        grid.innerHTML = PRODUCTS.map(p => '<div class="product-card" onclick="showProductDetail(\'' + p.id + '\')">' +
+            '<img class="product-img" src="' + p.img + '" onerror="this.src=\'https://placehold.co/400x400/F2EBD9/B8924A?text=' + encodeURIComponent(p.name.slice(0,15)) + '\'">' +
+            '<div class="product-info">' +
+            '<div class="product-name">' + escapeHtml(p.name) + '</div>' +
+            '<div class="product-price">$' + p.price.toFixed(2) + '</div>' +
+            '<div class="product-desc">' + escapeHtml(p.desc.substring(0, 70)) + (p.desc.length > 70 ? '...' : '') + '</div>' +
+            '<button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({id:\'' + p.id + '\', name:\'' + escapeHtml(p.name).replace(/'/g, "\\'") + '\', price:' + p.price + '})">Add to cart</button>' +
+            '</div></div>').join('');
+    }
+}
+
+function showPanel(panelId) {
+    document.querySelectorAll('.section-panel, .product-detail-panel').forEach(p => p.classList.remove('active-panel'));
+    const targetPanel = document.getElementById(panelId + 'Panel');
+    if(targetPanel) targetPanel.classList.add('active-panel');
+    if (panelId === 'products') renderProducts();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Submit Party Request - Opens email client with pre-filled form
+window.submitPartyRequest = function(e) {
+    if(e) e.preventDefault();
+    
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const partyDate = document.getElementById('partyDate').value;
+    const partyType = document.getElementById('partyType').value;
+    const guestCount = document.getElementById('guestCount').value;
+    const comments = document.getElementById('comments').value;
+    
+    let formattedDate = "Not specified";
+    if (partyDate) {
+        const dateObj = new Date(partyDate);
+        formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    
+    const subject = encodeURIComponent(`Pamper Party Request - ${firstName} ${lastName}`);
+    const body = encodeURIComponent(
+        `NEW PAMPER PARTY REQUEST\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+        `CUSTOMER INFORMATION:\n` +
+        `Name: ${firstName} ${lastName}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n\n` +
+        `PARTY DETAILS:\n` +
+        `Party Type: ${partyType}\n` +
+        `Preferred Date: ${formattedDate}\n` +
+        `Number of Guests: ${guestCount}\n\n` +
+        `ADDITIONAL COMMENTS:\n` +
+        `${comments || "No additional comments provided."}\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+        `Submitted from Relax Spa & Beauty Website\n` +
+        `Please contact the customer to confirm availability and deposit details.`
+    );
+    
+    window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
+    showToast("✓ Opening your email app! Please send the pre-filled email to complete your request.");
+    setTimeout(() => { document.getElementById('partyRequestForm').reset(); }, 100);
+    return false;
+};
+
+// Submit Co-Share Request - Opens email client with pre-filled form
+window.submitCoShareRequest = function(e) {
+    if(e) e.preventDefault();
+    
+    const firstName = document.getElementById('coshareFirstName').value;
+    const lastName = document.getElementById('coshareLastName').value;
+    const email = document.getElementById('coshareEmail').value;
+    const phone = document.getElementById('cosharePhone').value;
+    const businessType = document.getElementById('coshareBusinessType').value;
+    const years = document.getElementById('coshareYears').value;
+    const website = document.getElementById('coshareWebsite').value;
+    
+    const subject = encodeURIComponent(`Co-Share Inquiry - ${firstName} ${lastName}`);
+    const body = encodeURIComponent(
+        `NEW CO-SHARE INQUIRY\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+        `CONTACT INFORMATION:\n` +
+        `Name: ${firstName} ${lastName}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n\n` +
+        `BUSINESS INFORMATION:\n` +
+        `Business Type: ${businessType}\n` +
+        `Years in Business: ${years}\n` +
+        `Website: ${website || "Not provided"}\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+        `Submitted from Relax Spa & Beauty Co-Share Page\n` +
+        `Please contact the applicant to discuss rental opportunities and schedule a tour.`
+    );
+    
+    window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
+    showToast("✓ Opening your email app! Please send the pre-filled email to complete your inquiry.");
+    setTimeout(() => { document.getElementById('coshareRequestForm').reset(); }, 100);
+    return false;
+};
+
+// Chat Widget Functionality
+const chatKnowledge = [
+    { keywords: ["hour", "open", "time", "schedule", "when"], answer: "We're open Monday–Friday 8am–5pm. Pamper parties and some appointments may extend — just ask! ☀️" },
+    { keywords: ["phone", "number", "call", "contact", "reach"], answer: "Give us a ring: 📞 (818) 557-0024. Or email relaxappointment@yahoo.com. We're here!" },
+    { keywords: ["email", "mail"], answer: "📧 relaxappointment@yahoo.com — we'll get back to you within a few hours." },
+    { keywords: ["location", "address", "where", "burbank"], answer: "We're in beautiful Burbank, CA! 🌴 Exact address: 122 E. Olive Ave, Burbank, CA 91502." },
+    { keywords: ["massage", "swedish", "deep tissue", "therapeutic"], answer: "We offer Swedish (relaxation), Deep Tissue, Combination, Night Night Massage ($139/60min), Complete Care ($139/55min), Royal Treatment ($175/85min). Add-ons: hot stones, cupping, reflexology, CBD, scalp massage. 💆‍♀️" },
+    { keywords: ["facial", "facials", "skin"], answer: "Facials from $79 (30min) to $165 (90min Fantasy Facial). Options: European, Glycolic, Oxygen, Enzyme, Night Night ($145), Ageless Beauty, Dermaplane ($125), Back facial ($115)." },
+    { keywords: ["pamper party", "party", "bridal", "group", "bachelorette"], answer: "Pamper Parties! In-spa ($150–175/person) includes back massage + facial. Virtual ($79/person) with guided facial + products. Corporate parties available (chair massage, mini facials). 18% gratuity added for parties. 🎉" },
+    { keywords: ["product", "skincare", "buy", "shop", "lira", "dermalogica"], answer: "We carry Lira Clinical, Dermalogica, Dermaki, Societe, Dr. Schrammek, and Relax Signature Body Care. Natural, no parabens. Stop by or shop online! 🥥" },
+    { keywords: ["price", "cost", "how much", "pricing"], answer: "Prices vary by service: Facials start $79, Massages start $69 (30min) up to $175 (Royal). Body sculpt $99–$210. Check our Services page for full details!" },
+    { keywords: ["appointment", "book", "reservation", "schedule"], answer: "You can book online via our Appointments page, or call (818) 557-0024. We recommend scheduling 2 weeks in advance for parties." },
+    { keywords: ["gift card", "gift", "certificate"], answer: "🎁 Gift cards available! Purchase in person or call (818) 557-0024 to order." },
+    { keywords: ["co-share", "rent", "studio", "booth"], answer: "Yes! The Beauty Co-Op: rent a room from $400/month, includes reception, WiFi, utilities, 24hr access. Perfect for estheticians, nail techs, etc. Inquire via Co-Share page." },
+    { keywords: ["men", "male", "guy"], answer: "Absolutely — everyone is welcome! Massages, facials, grooming. Many male clients enjoy deep tissue and express sculpt." },
+    { keywords: ["parking", "park"], answer: "Free private lot parking available. Street parking also nearby. 🚗" },
+];
+
+const contactInfo = "📞 (818) 557-0024 · 📧 relaxappointment@yahoo.com · 🏢 122 E. Olive Ave, Burbank. We're here for you!";
+
+function getBotResponse(userMsg) {
+    const lowerMsg = userMsg.toLowerCase();
+    for (let item of chatKnowledge) {
+        for (let kw of item.keywords) {
+            if (lowerMsg.includes(kw)) {
+                return item.answer;
+            }
+        }
+    }
+    return `🌊 I'm not 100% sure, but our team would love to help! ${contactInfo}`;
+}
+
+function addChatMessage(text, sender) {
+    const messagesContainer = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}`;
+    messageDiv.textContent = text;
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function sendChatMessage() {
+    const input = document.getElementById('chatInput');
+    const message = input.value.trim();
+    if (message === '') return;
+    
+    addChatMessage(message, 'user');
+    input.value = '';
+    
+    setTimeout(() => {
+        const reply = getBotResponse(message);
+        addChatMessage(reply, 'bot');
+    }, 500);
+}
+
+// Chat toggle functionality
+const chatToggleBtn = document.getElementById('chatToggleBtn');
+const chatWindow = document.getElementById('chatWindow');
+const closeChatBtn = document.querySelector('.close-chat');
+
+if (chatToggleBtn) {
+    chatToggleBtn.addEventListener('click', () => {
+        if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+            chatWindow.style.display = 'flex';
+        } else {
+            chatWindow.style.display = 'none';
+        }
+    });
+}
+
+if (closeChatBtn) {
+    closeChatBtn.addEventListener('click', () => {
+        chatWindow.style.display = 'none';
+    });
+}
+
+// Send message on button click
+const sendChatBtn = document.getElementById('sendChatBtn');
+if (sendChatBtn) {
+    sendChatBtn.addEventListener('click', sendChatMessage);
+}
+
+// Send message on Enter key
+const chatInput = document.getElementById('chatInput');
+if (chatInput) {
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendChatMessage();
+        }
+    });
+}
+
+window.showPanel = showPanel;
+window.addToCart = addToCart;
+window.showProductDetail = showProductDetail;
+window.submitCoShareRequest = submitCoShareRequest;
+window.showCart = showCart;
+window.closeCart = closeCart;
+window.removeFromCart = removeFromCart;
+window.checkout = checkout;
+
+// Load cart from localStorage on page load
+const savedCart = localStorage.getItem('relax_cart');
+if (savedCart) {
+    cart = JSON.parse(savedCart);
+    updateCartCount();
+}
+
+renderProducts();
+</script>
+</body>
+</html>
