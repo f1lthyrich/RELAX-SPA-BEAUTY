@@ -1014,5 +1014,210 @@ if (savedCart) {
 
 renderProducts();
 </script>
+
+<script>
+(function() {
+    // Product mapping for all 117 products from the store
+    const productCheckoutLinks = {
+        "age defying boosting pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13573",
+        "bio caviar cr\u00e8me": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12777",
+        "bio enzyme cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12781",
+        "bio hydra c serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12752",
+        "bio hydra infusion": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12773",
+        "bio lip factor": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12745",
+        "clear skin boosting pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13566",
+        "health recovery balm": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12767",
+        "ice balancing lotion": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12935",
+        "ice clarifying treatment": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12941",
+        "ice refining masque": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12932",
+        "ice sal cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12938",
+        "mystiq iluminating beauty oil": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12770",
+        "mystiq lifting masque": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12929",
+        "mystiq perfecting eye cr\u00e8me": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12748",
+        "pro anti-aging pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12763",
+        "pro c4 retinol serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12756",
+        "pro lite serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12759",
+        "pro retinol cr\u00e8me": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12750",
+        "pure everyday cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13489",
+        "restorative neck sculpting cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13577",
+        "skin bright boosting pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13569",
+        "skin script charcoal clay cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7546",
+        "spf solar shield 30 oil free": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12742",
+        "superfruit enzyme exfoliator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13493",
+        "ultimate eye lift system": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13501",
+        "vitamin d complex": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13497",
+        "skin script glycolic cleanser 6.5 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4890",
+        "skin script green tea citrus cleanser 6.5 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4892",
+        "skin script pomegranate antioxidant cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4894",
+        "skin script glycolic and retinol pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4899",
+        "skin script clarifying toner pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4896",
+        "skin script ageless hydrating serum 1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4905",
+        "skin script retinaldehyde serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7547",
+        "skin script peptide eye serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4910",
+        "skin script vitamin c green tea serum 1 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4907",
+        "skin script cucumber hydration toner": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7390",
+        "skin script rx mint refining toner": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8670",
+        "skin script citrus-c nourishing cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8672",
+        "skin script tri-peptide eye cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8674",
+        "skin script peptide restoration moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8678",
+        "skin script ageless skin moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4912",
+        "skin script cacteen moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=5291",
+        "skin script light aloe moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8676",
+        "skin script acai berry moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7549",
+        "skin script hydrating moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4914",
+        "skin script raspberry refining scrub 4 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4901",
+        "skin script retinol exfoliating scrub mask": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4903",
+        "skin script sheer protection spf 30 2oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8680",
+        "skin script the creamy restore four": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8684",
+        "skin script minimalist kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8682",
+        "skin script the lite restore four kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8686",
+        "skin script plump & protect creamy kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8689",
+        "skin script [new] plump & protect lite kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8691",
+        "dermalogica precleanse 5.1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7555",
+        "dermalogica intensive moisture cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8648",
+        "dermalogica special cleansing gel 8.4 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7554",
+        "dermalogica blackhead clearing fizz mask": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7551",
+        "dermalogica barrier repair": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7417",
+        "dermalogica circular hydration serum with hyaluronic acid": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8666",
+        "dermalogica daily microfoliant": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7420",
+        "dermalogica multi-active toner 8.4 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=211",
+        "dermalogica active moist 1.7 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=217",
+        "dermalogica skin smoothing cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=219",
+        "dermalogica intensive moisture balance": "https://relaxspaandbeauty.com/checkout/?add-to-cart=220",
+        "dermalogica antioxidant hydramist 5.1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=234",
+        "dermalogica super rich repair 1.7 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=242",
+        "dermalogica tri-active cleanse 5.1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=250",
+        "dermalogica powerfoliant 2 0.3 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=251",
+        "dermalogica protection 50 sport spf50": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8668",
+        "dermalogica ultracalming cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=257",
+        "dermalogica hyaluronic ceramide mist": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8664",
+        "dermalogica invisible physical defense spf 30": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8660",
+        "dermalogica prisma protect spf 30": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8658",
+        "dermalogica charcoal rescue masque": "https://relaxspaandbeauty.com/checkout/?add-to-cart=5286",
+        "dermalogica skin hydrating masque": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8650",
+        "dermalogica skin soothing hydration lotion": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8646",
+        "dermalogica breakout clearing foaming wash": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7552",
+        "dermalogica clear start spf30": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7553",
+        "dermalogica age defense kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8652",
+        "dermalogica breakout clearing kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8654",
+        "dermalogica sensitive skin rescue kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8656",
+        "dermaki acne mist": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8778",
+        "dermaki sensitive face & body bar": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8697",
+        "dermaki luxurious face and body bar": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7650",
+        "dermaki balance": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8704",
+        "dermaki sensitive balance": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8706",
+        "dermaki exfoliating powder": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8709",
+        "dermaki vitamin a complex": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8724",
+        "dermaki vitamin c complex": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8728",
+        "dermaki soothe": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8732",
+        "dermaki nourish": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8734",
+        "dermaki age perfect": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8742",
+        "dermaki sensitive age perfect": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8746",
+        "dermaki daily facial moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7656",
+        "dermaki daily moisturizing cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8748",
+        "dermaki intense hydration": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7655",
+        "dermaki cbd daily facial moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7657",
+        "le mieux oh my glow activator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7543",
+        "le mieux oh my glow serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7544",
+        "bella beauty aqua spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4937",
+        "bella beauty coral spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4940",
+        "bella beauty white spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=804",
+        "bella beauty aqua towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4927",
+        "bella beauty coral towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4931",
+        "bella beauty white towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=798",
+        "dr. schrammek special regulating cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=322",
+        "dr. schrammek herbal care lotion": "https://relaxspaandbeauty.com/checkout/?add-to-cart=321",
+        "lightstim for acne": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7261",
+        "lightstim for wrinkles": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7264",
+        "o2 infuser with serum and activator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7545",
+        "o2\u00a0infuser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7542"
+};
+    const APPOINTMENT_URL = "https://www.vagaro.com/relaxspaandbeauty";
+    const SHOP_URL = "https://relaxspaandbeauty.com/shop/";
+
+    function initCustomFunctionality() {
+        // 1. Update "PRODUCTS" link to point directly to the shop
+        document.querySelectorAll('a, button').forEach(el => {
+            const text = el.innerText.trim().toUpperCase();
+            if (text === 'PRODUCTS') {
+                if (el.tagName === 'A') {
+                    el.setAttribute('href', SHOP_URL);
+                    el.setAttribute('target', '_blank');
+                }
+                el.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(SHOP_URL, '_blank');
+                };
+            }
+        });
+
+        // 2. Update "Add to Cart" buttons to open direct checkout in a new tab
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.add-to-cart-btn');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const card = btn.closest('.product-card');
+                if (card) {
+                    const nameEl = card.querySelector('.product-name');
+                    if (nameEl) {
+                        const name = nameEl.innerText.trim().toLowerCase();
+                        if (productCheckoutLinks[name]) {
+                            window.open(productCheckoutLinks[name], '_blank');
+                            return;
+                        }
+                    }
+                }
+            }
+        }, true);
+
+        // 3. Fix Appointment Links
+        document.addEventListener('click', function(e) {
+            const el = e.target.closest('a, button');
+            if (!el) return;
+            
+            const text = el.innerText.toLowerCase();
+            const href = el.getAttribute('href');
+            
+            if (text.includes('appointment') || text.includes('book now') || (href && href.includes('vagaro'))) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(APPOINTMENT_URL, '_blank');
+            }
+        }, true);
+
+        // 4. User's provided snippet for blocking external links
+        // This will block all links leading to the original site (relaxspaandbeauty.com)
+        // except for the ones we explicitly want to keep (shop, checkout, appointment)
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            const href = link.href;
+            const isShopLink = href === SHOP_URL;
+            const isAppointmentLink = href === APPOINTMENT_URL;
+            const isCheckoutLink = Object.values(productCheckoutLinks).includes(href);
+            
+            // If the link leads to the original site and is NOT one of our allowed links
+            if (href.includes("relaxspaandbeauty.com") && !isShopLink && !isAppointmentLink && !isCheckoutLink) {
+                // Убираем href
+                link.removeAttribute("href");
+                // Меняем курсор, чтобы выглядело как обычный элемент
+                link.style.cursor = "default";
+                // Блокируем клик
+                link.addEventListener("click", e => e.preventDefault());
+            }
+        });
+    }
+
+    // Run initialization
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCustomFunctionality);
+    } else {
+        initCustomFunctionality();
+    }
+})();
+</script>
+
 </body>
 </html>
