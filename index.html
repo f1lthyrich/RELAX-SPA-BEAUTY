@@ -23,9 +23,6 @@ body { font-family: 'Jost', sans-serif; background: #FDF8F0; color: #2C2418; ove
 .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #B8924A, #8C6A2E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 .logo-text h1 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 600; }
 .logo-text p { font-size: 0.45rem; letter-spacing: 1px; color: #B8924A; }
-.service-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.service-pill { padding: 3px 12px; border-radius: 40px; font-size: 0.65rem; font-weight: 500; cursor: pointer; background: rgba(184,146,74,0.06); border: 1px solid rgba(184,146,74,0.12); }
-.service-pill:hover { background: rgba(184,146,74,0.12); transform: translateY(-1px); }
 .btn-book { background: linear-gradient(135deg, #B8924A, #9B783E); color: white; border: none; padding: 5px 14px; border-radius: 40px; font-weight: 600; font-size: 0.65rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
 .btn-book:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(184,146,74,0.3); }
 .nav-menu { display: flex; justify-content: center; gap: 1.2rem; padding: 0.4rem 1.8rem; border-top: 1px solid rgba(184,146,74,0.08); flex-wrap: wrap; }
@@ -239,8 +236,6 @@ body { font-family: 'Jost', sans-serif; background: #FDF8F0; color: #2C2418; ove
 .logo-icon { width: 24px; height: 24px; font-size: 0.7rem; }
 .logo-text h1 { font-size: 0.7rem; }
 .logo-text p { font-size: 0.35rem; }
-.service-pills { gap: 0.2rem; }
-.service-pill { padding: 2px 8px; font-size: 0.55rem; }
 .btn-book { padding: 3px 10px; font-size: 0.55rem; }
 .nav-menu { gap: 0.6rem; padding: 0.3rem 0.5rem; }
 .nav-menu a { font-size: 0.55rem; }
@@ -264,7 +259,6 @@ body { font-family: 'Jost', sans-serif; background: #FDF8F0; color: #2C2418; ove
 </div>
 <div class="main-header">
 <div class="logo" onclick="showPanel('home')"><div class="logo-icon"><i class="fas fa-spa"></i></div><div class="logo-text"><h1>Relax Spa & Beauty</h1><p>EST. 2012 · BURBANK</p></div></div>
-<div class="service-pills"><div class="service-pill" onclick="showPanel('services')">Facials</div><div class="service-pill" onclick="showPanel('services')">Massages</div><div class="service-pill" onclick="showPanel('services')">Body Sculpting</div><div class="service-pill" onclick="showPanel('pamper')">Pamper Parties</div><div class="service-pill" onclick="showPanel('products')">Shop</div></div>
 <div class="header-actions"><button class="btn-book" onclick="showPanel('appointments')"><i class="fas fa-calendar-check"></i> Book Now</button></div>
 </div>
 <div class="nav-menu"><a onclick="showPanel('home')">HOME</a><a onclick="showPanel('services')">SERVICES</a><a onclick="showPanel('products')">PRODUCTS</a><a onclick="showPanel('pamper')">PAMPER PARTIES</a><a onclick="showPanel('inside')">INSIDE THE SPA</a><a onclick="showPanel('appointments')">APPOINTMENTS</a><a onclick="showPanel('coshare')">CO-SHARE</a><a onclick="showPanel('policy')">POLICY</a></div>
@@ -565,7 +559,6 @@ body { font-family: 'Jost', sans-serif; background: #FDF8F0; color: #2C2418; ove
 <script>
 // COMPLETE PRODUCT DATABASE - 117 PRODUCTS TOTAL
 const PRODUCTS = [
-// First 101 products from original
 {id: "p1", name: "Age Defying Boosting Pads", price: 75, img: "https://relaxspaandbeauty.com/wp-content/uploads/2024/09/AgeDefyingBoostingPads.webp", desc: "An anti-aging skin enhancer designed to target skin aging in 9 different ways."},
 {id: "p2", name: "BIO CAVIAR CREME", price: 105, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_caviarcreme_front.jpg", desc: "Decadent rich hydrating creme with Caviar, Silver, Gold and Madonna Lily Plant Stem Cells."},
 {id: "p3", name: "Bio Enzyme Cleanser", price: 33, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_enzyme_cleanser.png", desc: "Gentle gel cleanser for all skin types."},
@@ -667,7 +660,6 @@ const PRODUCTS = [
 {id: "p99", name: "LightStim for Acne", price: 169, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/ProductHero-Acne_3985x4472_0ptimage_1080x.jpg", desc: "Blue light destroys acne-causing bacteria."},
 {id: "p100", name: "7E MyoLift Mini", price: 284, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/image1.jpeg", desc: "Microcurrent facial machine for anti-aging."},
 {id: "p101", name: "ZOE Bliss", price: 145, img: "https://relaxspaandbeauty.com/wp-content/uploads/2021/07/Hot-Pink-Back_540x.jpg", desc: "Sonic device with 7000 micro-pulsations."},
-// ADDITIONAL 16 PRODUCTS to reach 117 total
 {id: "p102", name: "Hydrating Lip Treatment", price: 32, img: "https://relaxspaandbeauty.com/wp-content/uploads/2023/03/bio_hydra_infusion_front.png", desc: "Hydrating lip treatment that restores moisture for softer, fuller and supple lips."},
 {id: "p103", name: "Skin Script Ageless Eye Cream", price: 42, img: "https://relaxspaandbeauty.com/wp-content/uploads/2020/03/peptide-eye-cream.png", desc: "Targets fine lines and wrinkles around the delicate eye area with peptides and antioxidants."},
 {id: "p104", name: "Dermalogica Sound Sleep Cocoon", price: 68, img: "https://relaxspaandbeauty.com/wp-content/uploads/2022/11/dermalogica_circular_hydration_serum.webp", desc: "Nighttime gel-cream that supports skin's overnight restoration for a refreshed look."},
@@ -690,9 +682,7 @@ let cart = [];
 
 function updateCartCount() {
     const cartCountSpan = document.getElementById('cartCount');
-    if (cartCountSpan) {
-        cartCountSpan.textContent = cart.length;
-    }
+    if (cartCountSpan) { cartCountSpan.textContent = cart.length; }
 }
 
 function showToast(msg) {
@@ -713,62 +703,36 @@ function addToCart(item) {
 function showCart() {
     const modal = document.getElementById('cartModal');
     const container = document.getElementById('cartItemsContainer');
-    
     if (cart.length === 0) {
         container.innerHTML = '<div class="empty-cart">Your cart is empty. Start adding some products!</div>';
     } else {
         let total = 0;
         container.innerHTML = cart.map((item, index) => {
             total += item.price;
-            return `
-                <div class="cart-item">
-                    <div class="cart-item-name">${escapeHtml(item.name)}</div>
-                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
-                    <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
-                </div>
-            `;
+            return `<div class="cart-item"><div class="cart-item-name">${escapeHtml(item.name)}</div><div class="cart-item-price">$${item.price.toFixed(2)}</div><button class="remove-item" onclick="removeFromCart(${index})">Remove</button></div>`;
         }).join('');
         container.innerHTML += `<div class="cart-total">Total: $${total.toFixed(2)}</div>`;
     }
-    
     modal.classList.add('active');
 }
 
-function closeCart() {
-    document.getElementById('cartModal').classList.remove('active');
-}
+function closeCart() { document.getElementById('cartModal').classList.remove('active'); }
 
 function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem('relax_cart', JSON.stringify(cart));
     updateCartCount();
-    showCart(); // Refresh cart display
+    showCart();
 }
 
 function checkout() {
-    if (cart.length === 0) {
-        showToast("Your cart is empty. Add some items first!");
-        return;
-    }
-    // Open email with cart details
+    if (cart.length === 0) { showToast("Your cart is empty. Add some items first!"); return; }
     let cartDetails = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
     let total = cart.reduce((sum, item) => sum + item.price, 0);
     let subject = encodeURIComponent("New Order - Relax Spa & Beauty");
-    let body = encodeURIComponent(
-        `NEW ORDER\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-        `ITEMS ORDERED:\n${cartDetails}\n\n` +
-        `TOTAL: $${total.toFixed(2)}\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-        `Submitted from Relax Spa & Beauty Website\n` +
-        `Please contact customer to process payment and arrange pickup/shipping.`
-    );
+    let body = encodeURIComponent(`NEW ORDER\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nITEMS ORDERED:\n${cartDetails}\n\nTOTAL: $${total.toFixed(2)}\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSubmitted from Relax Spa & Beauty Website\nPlease contact customer to process payment and arrange pickup/shipping.`);
     window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
     showToast("✓ Opening your email app! Please send the order details to complete your purchase.");
-    // Optionally clear cart after checkout
-    // cart = [];
-    // updateCartCount();
-    // closeCart();
 }
 
 function escapeHtml(s) {
@@ -793,7 +757,7 @@ function showProductDetail(productId) {
         '<div><h1 style="font-family:Playfair Display; font-size:1.8rem;">' + escapeHtml(product.name) + '</h1>' +
         '<div style="font-size:1.5rem; color:#B8924A; font-weight:700;">$' + product.price.toFixed(2) + '</div>' +
         '<p style="margin:1rem 0; line-height:1.5;">' + escapeHtml(product.desc) + '</p>' +
-        '<button class="btn-book" style="padding:10px 24px;" onclick="addToCart({id:\'' + product.id + '\', name:\'' + escapeHtml(product.name).replace(/'/g, "\\'") + '\', price:' + product.price + '})">Add to Cart</button></div></div>' +
+        '<button class="btn-book" style="padding:10px 24px;" onclick="addToCart({id:\'' + product.id + '\', name:\'' + escapeHtml(product.name).replace(/\'/g, "\\'") + '\', price:' + product.price + '})">Add to Cart</button></div></div>' +
         '<div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(184,146,74,0.1);"><h3>You May Also Like</h3><div id="recGrid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.8rem; margin-top:0.8rem;"></div></div></div>';
     const recs = PRODUCTS.filter(p => p.id !== productId).sort(() => 0.5 - Math.random()).slice(0, 4);
     const recGrid = document.getElementById('recGrid');
@@ -814,7 +778,7 @@ function renderProducts() {
             '<div class="product-name">' + escapeHtml(p.name) + '</div>' +
             '<div class="product-price">$' + p.price.toFixed(2) + '</div>' +
             '<div class="product-desc">' + escapeHtml(p.desc.substring(0, 70)) + (p.desc.length > 70 ? '...' : '') + '</div>' +
-            '<button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({id:\'' + p.id + '\', name:\'' + escapeHtml(p.name).replace(/'/g, "\\'") + '\', price:' + p.price + '})">Add to cart</button>' +
+            '<button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({id:\'' + p.id + '\', name:\'' + escapeHtml(p.name).replace(/\'/g, "\\'") + '\', price:' + p.price + '})">Add to cart</button>' +
             '</div></div>').join('');
     }
 }
@@ -827,10 +791,8 @@ function showPanel(panelId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Submit Party Request - Opens email client with pre-filled form
 window.submitPartyRequest = function(e) {
     if(e) e.preventDefault();
-    
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
@@ -839,42 +801,21 @@ window.submitPartyRequest = function(e) {
     const partyType = document.getElementById('partyType').value;
     const guestCount = document.getElementById('guestCount').value;
     const comments = document.getElementById('comments').value;
-    
     let formattedDate = "Not specified";
     if (partyDate) {
         const dateObj = new Date(partyDate);
         formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     }
-    
     const subject = encodeURIComponent(`Pamper Party Request - ${firstName} ${lastName}`);
-    const body = encodeURIComponent(
-        `NEW PAMPER PARTY REQUEST\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-        `CUSTOMER INFORMATION:\n` +
-        `Name: ${firstName} ${lastName}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n\n` +
-        `PARTY DETAILS:\n` +
-        `Party Type: ${partyType}\n` +
-        `Preferred Date: ${formattedDate}\n` +
-        `Number of Guests: ${guestCount}\n\n` +
-        `ADDITIONAL COMMENTS:\n` +
-        `${comments || "No additional comments provided."}\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-        `Submitted from Relax Spa & Beauty Website\n` +
-        `Please contact the customer to confirm availability and deposit details.`
-    );
-    
+    const body = encodeURIComponent(`NEW PAMPER PARTY REQUEST\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nCUSTOMER INFORMATION:\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nPARTY DETAILS:\nParty Type: ${partyType}\nPreferred Date: ${formattedDate}\nNumber of Guests: ${guestCount}\n\nADDITIONAL COMMENTS:\n${comments || "No additional comments provided."}\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSubmitted from Relax Spa & Beauty Website\nPlease contact the customer to confirm availability and deposit details.`);
     window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
     showToast("✓ Opening your email app! Please send the pre-filled email to complete your request.");
     setTimeout(() => { document.getElementById('partyRequestForm').reset(); }, 100);
     return false;
 };
 
-// Submit Co-Share Request - Opens email client with pre-filled form
 window.submitCoShareRequest = function(e) {
     if(e) e.preventDefault();
-    
     const firstName = document.getElementById('coshareFirstName').value;
     const lastName = document.getElementById('coshareLastName').value;
     const email = document.getElementById('coshareEmail').value;
@@ -882,31 +823,15 @@ window.submitCoShareRequest = function(e) {
     const businessType = document.getElementById('coshareBusinessType').value;
     const years = document.getElementById('coshareYears').value;
     const website = document.getElementById('coshareWebsite').value;
-    
     const subject = encodeURIComponent(`Co-Share Inquiry - ${firstName} ${lastName}`);
-    const body = encodeURIComponent(
-        `NEW CO-SHARE INQUIRY\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-        `CONTACT INFORMATION:\n` +
-        `Name: ${firstName} ${lastName}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n\n` +
-        `BUSINESS INFORMATION:\n` +
-        `Business Type: ${businessType}\n` +
-        `Years in Business: ${years}\n` +
-        `Website: ${website || "Not provided"}\n\n` +
-        `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-        `Submitted from Relax Spa & Beauty Co-Share Page\n` +
-        `Please contact the applicant to discuss rental opportunities and schedule a tour.`
-    );
-    
+    const body = encodeURIComponent(`NEW CO-SHARE INQUIRY\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nCONTACT INFORMATION:\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nBUSINESS INFORMATION:\nBusiness Type: ${businessType}\nYears in Business: ${years}\nWebsite: ${website || "Not provided"}\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSubmitted from Relax Spa & Beauty Co-Share Page\nPlease contact the applicant to discuss rental opportunities and schedule a tour.`);
     window.location.href = `mailto:relaxappointment@yahoo.com?subject=${subject}&body=${body}`;
     showToast("✓ Opening your email app! Please send the pre-filled email to complete your inquiry.");
     setTimeout(() => { document.getElementById('coshareRequestForm').reset(); }, 100);
     return false;
 };
 
-// Chat Widget Functionality
+// Chat Widget
 const chatKnowledge = [
     { keywords: ["hour", "open", "time", "schedule", "when"], answer: "We're open Monday–Friday 8am–5pm. Pamper parties and some appointments may extend — just ask! ☀️" },
     { keywords: ["phone", "number", "call", "contact", "reach"], answer: "Give us a ring: 📞 (818) 557-0024. Or email relaxappointment@yahoo.com. We're here!" },
@@ -924,18 +849,14 @@ const chatKnowledge = [
     { keywords: ["parking", "park"], answer: "Free private lot parking available. Street parking also nearby. 🚗" },
 ];
 
-const contactInfo = "📞 (818) 557-0024 · 📧 relaxappointment@yahoo.com · 🏢 122 E. Olive Ave, Burbank. We're here for you!";
-
 function getBotResponse(userMsg) {
     const lowerMsg = userMsg.toLowerCase();
     for (let item of chatKnowledge) {
         for (let kw of item.keywords) {
-            if (lowerMsg.includes(kw)) {
-                return item.answer;
-            }
+            if (lowerMsg.includes(kw)) return item.answer;
         }
     }
-    return `🌊 I'm not 100% sure, but our team would love to help! ${contactInfo}`;
+    return `🌊 I'm not 100% sure, but our team would love to help! 📞 (818) 557-0024 · 📧 relaxappointment@yahoo.com · 🏢 122 E. Olive Ave, Burbank. We're here for you!`;
 }
 
 function addChatMessage(text, sender) {
@@ -951,52 +872,24 @@ function sendChatMessage() {
     const input = document.getElementById('chatInput');
     const message = input.value.trim();
     if (message === '') return;
-    
     addChatMessage(message, 'user');
     input.value = '';
-    
-    setTimeout(() => {
-        const reply = getBotResponse(message);
-        addChatMessage(reply, 'bot');
-    }, 500);
+    setTimeout(() => { addChatMessage(getBotResponse(message), 'bot'); }, 500);
 }
 
-// Chat toggle functionality
 const chatToggleBtn = document.getElementById('chatToggleBtn');
 const chatWindow = document.getElementById('chatWindow');
 const closeChatBtn = document.querySelector('.close-chat');
 
 if (chatToggleBtn) {
     chatToggleBtn.addEventListener('click', () => {
-        if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
-            chatWindow.style.display = 'flex';
-        } else {
-            chatWindow.style.display = 'none';
-        }
+        chatWindow.style.display = (chatWindow.style.display === 'none' || chatWindow.style.display === '') ? 'flex' : 'none';
     });
 }
+if (closeChatBtn) { closeChatBtn.addEventListener('click', () => { chatWindow.style.display = 'none'; }); }
 
-if (closeChatBtn) {
-    closeChatBtn.addEventListener('click', () => {
-        chatWindow.style.display = 'none';
-    });
-}
-
-// Send message on button click
-const sendChatBtn = document.getElementById('sendChatBtn');
-if (sendChatBtn) {
-    sendChatBtn.addEventListener('click', sendChatMessage);
-}
-
-// Send message on Enter key
-const chatInput = document.getElementById('chatInput');
-if (chatInput) {
-    chatInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendChatMessage();
-        }
-    });
-}
+document.getElementById('sendChatBtn').addEventListener('click', sendChatMessage);
+document.getElementById('chatInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') sendChatMessage(); });
 
 window.showPanel = showPanel;
 window.addToCart = addToCart;
@@ -1007,19 +900,13 @@ window.closeCart = closeCart;
 window.removeFromCart = removeFromCart;
 window.checkout = checkout;
 
-// Load cart from localStorage on page load
 const savedCart = localStorage.getItem('relax_cart');
-if (savedCart) {
-    cart = JSON.parse(savedCart);
-    updateCartCount();
-}
-
+if (savedCart) { cart = JSON.parse(savedCart); updateCartCount(); }
 renderProducts();
 </script>
 
 <script>
 (function() {
-    // Product mapping for all 117 products from the store
     const productCheckoutLinks = {
         "age defying boosting pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13573",
         "bio caviar cr\u00e8me": "https://relaxspaandbeauty.com/checkout/?add-to-cart=12777",
@@ -1048,33 +935,6 @@ renderProducts();
         "superfruit enzyme exfoliator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13493",
         "ultimate eye lift system": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13501",
         "vitamin d complex": "https://relaxspaandbeauty.com/checkout/?add-to-cart=13497",
-        "skin script glycolic cleanser 6.5 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4890",
-        "skin script green tea citrus cleanser 6.5 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4892",
-        "skin script pomegranate antioxidant cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4894",
-        "skin script glycolic and retinol pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4899",
-        "skin script clarifying toner pads": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4896",
-        "skin script ageless hydrating serum 1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4905",
-        "skin script retinaldehyde serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7547",
-        "skin script peptide eye serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4910",
-        "skin script vitamin c green tea serum 1 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4907",
-        "skin script cucumber hydration toner": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7390",
-        "skin script rx mint refining toner": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8670",
-        "skin script citrus-c nourishing cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8672",
-        "skin script tri-peptide eye cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8674",
-        "skin script peptide restoration moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8678",
-        "skin script ageless skin moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4912",
-        "skin script cacteen moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=5291",
-        "skin script light aloe moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8676",
-        "skin script acai berry moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7549",
-        "skin script hydrating moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4914",
-        "skin script raspberry refining scrub 4 oz.": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4901",
-        "skin script retinol exfoliating scrub mask": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4903",
-        "skin script sheer protection spf 30 2oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8680",
-        "skin script the creamy restore four": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8684",
-        "skin script minimalist kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8682",
-        "skin script the lite restore four kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8686",
-        "skin script plump & protect creamy kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8689",
-        "skin script [new] plump & protect lite kit": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8691",
         "dermalogica precleanse 5.1 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7555",
         "dermalogica intensive moisture cleanser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=8648",
         "dermalogica special cleansing gel 8.4 oz": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7554",
@@ -1121,103 +981,58 @@ renderProducts();
         "dermaki cbd daily facial moisturizer": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7657",
         "le mieux oh my glow activator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7543",
         "le mieux oh my glow serum": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7544",
-        "bella beauty aqua spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4937",
-        "bella beauty coral spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4940",
-        "bella beauty white spa headband": "https://relaxspaandbeauty.com/checkout/?add-to-cart=804",
-        "bella beauty aqua towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4927",
-        "bella beauty coral towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=4931",
-        "bella beauty white towel wrap": "https://relaxspaandbeauty.com/checkout/?add-to-cart=798",
-        "dr. schrammek special regulating cream": "https://relaxspaandbeauty.com/checkout/?add-to-cart=322",
-        "dr. schrammek herbal care lotion": "https://relaxspaandbeauty.com/checkout/?add-to-cart=321",
-        "lightstim for acne": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7261",
-        "lightstim for wrinkles": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7264",
-        "o2 infuser with serum and activator": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7545",
-        "o2\u00a0infuser": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7542"
-};
+        "lightstim for acne": "https://relaxspaandbeauty.com/checkout/?add-to-cart=7261"
+    };
     const APPOINTMENT_URL = "https://www.vagaro.com/relaxspaandbeauty";
     const SHOP_URL = "https://relaxspaandbeauty.com/shop/";
 
     function initCustomFunctionality() {
-        // 1. Update "PRODUCTS" link to point directly to the shop
         document.querySelectorAll('a, button').forEach(el => {
             const text = el.innerText.trim().toUpperCase();
             if (text === 'PRODUCTS') {
-                if (el.tagName === 'A') {
-                    el.setAttribute('href', SHOP_URL);
-                    el.setAttribute('target', '_blank');
-                }
-                el.onclick = function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(SHOP_URL, '_blank');
-                };
+                if (el.tagName === 'A') { el.setAttribute('href', SHOP_URL); el.setAttribute('target', '_blank'); }
+                el.onclick = function(e) { e.preventDefault(); e.stopPropagation(); window.open(SHOP_URL, '_blank'); };
             }
         });
 
-        // 2. Update "Add to Cart" buttons to open direct checkout in a new tab
         document.addEventListener('click', function(e) {
             const btn = e.target.closest('.add-to-cart-btn');
             if (btn) {
-                e.preventDefault();
-                e.stopPropagation();
-                
+                e.preventDefault(); e.stopPropagation();
                 const card = btn.closest('.product-card');
                 if (card) {
                     const nameEl = card.querySelector('.product-name');
                     if (nameEl) {
                         const name = nameEl.innerText.trim().toLowerCase();
-                        if (productCheckoutLinks[name]) {
-                            window.open(productCheckoutLinks[name], '_blank');
-                            return;
-                        }
+                        if (productCheckoutLinks[name]) { window.open(productCheckoutLinks[name], '_blank'); return; }
                     }
                 }
             }
         }, true);
 
-        // 3. Fix Appointment Links
         document.addEventListener('click', function(e) {
             const el = e.target.closest('a, button');
             if (!el) return;
-            
             const text = el.innerText.toLowerCase();
             const href = el.getAttribute('href');
-            
             if (text.includes('appointment') || text.includes('book now') || (href && href.includes('vagaro'))) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open(APPOINTMENT_URL, '_blank');
+                e.preventDefault(); e.stopPropagation(); window.open(APPOINTMENT_URL, '_blank');
             }
         }, true);
 
-        // 4. User's provided snippet for blocking external links
-        // This will block all links leading to the original site (relaxspaandbeauty.com)
-        // except for the ones we explicitly want to keep (shop, checkout, appointment)
         const links = document.querySelectorAll("a");
         links.forEach(link => {
             const href = link.href;
-            const isShopLink = href === SHOP_URL;
-            const isAppointmentLink = href === APPOINTMENT_URL;
-            const isCheckoutLink = Object.values(productCheckoutLinks).includes(href);
-            
-            // If the link leads to the original site and is NOT one of our allowed links
-            if (href.includes("relaxspaandbeauty.com") && !isShopLink && !isAppointmentLink && !isCheckoutLink) {
-                // Убираем href
+            if (href.includes("relaxspaandbeauty.com") && href !== SHOP_URL && href !== APPOINTMENT_URL && !Object.values(productCheckoutLinks).includes(href)) {
                 link.removeAttribute("href");
-                // Меняем курсор, чтобы выглядело как обычный элемент
                 link.style.cursor = "default";
-                // Блокируем клик
                 link.addEventListener("click", e => e.preventDefault());
             }
         });
     }
 
-    // Run initialization
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCustomFunctionality);
-    } else {
-        initCustomFunctionality();
-    }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initCustomFunctionality); }
+    else { initCustomFunctionality(); }
 })();
 </script>
 
